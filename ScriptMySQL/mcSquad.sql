@@ -1,9 +1,10 @@
-DROP DATABASE portafolio;
-CREATE DATABASE portafolio;
-USE portafolio;
+DROP DATABASE mcsquad;
+CREATE DATABASE mcsquad;
+USE mcsquad;
 
 CREATE TABLE usuario (
 idusuario int not null auto_increment primary key, 
+username varchar(30) not null,
 nombre varchar(30) not null, 
 apellido varchar(30) not null, 
 fechanacimiento varchar(10) not null, 
