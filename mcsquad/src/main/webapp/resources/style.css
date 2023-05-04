@@ -1,0 +1,57 @@
+/* importacion de letra */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+/* logo pagina*/
+#logo{
+    width: 150px; 
+}
+/* Navbar*/
+#navbar{
+    background-color:#cbea8c;
+    font-family: 'Montserrat', sans-serif;
+}
+/* Imagen bajo el nav*/
+#boycard1{
+    border: none;   
+    background-color: #D0F0C0;
+}
+
+/* imagenes con hover*/
+.img-fluid:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+  }
+/* Cuerpo de pagina*/
+#bodyindex{
+    background-color: #D0F0C0;
+}
+/* Cartas*/
+#cartas{
+    background-color: #A7DB42;
+}
+.card-footer{
+    background-color: #c7e887;
+}
+/* footer*/
+#footer{
+    background-color:#b8e75b;
+}
+/* sinfondo1 */
+#sinfondo1 {
+    width: 50%;    /* ajustar el tamaño de la imagen */
+    height: auto;  /*  proporción de la imagen */
+  }
+  #sinfondo2 {
+    width: 100%;    /* ajustar el tamaño de la imagen */
+    height: auto;  /*  proporción de la imagen */
+  }
+  #sinfondo3 {
+    width: 100%;    /* ajustar el tamaño de la imagen */
+    height: auto;  /*  proporción de la imagen */
+  }
+  #sinfondo4 {
+    width: 100%;    /* ajustar el tamaño de la imagen */
+    height: auto;  /*  proporción de la imagen */
+  }
+
