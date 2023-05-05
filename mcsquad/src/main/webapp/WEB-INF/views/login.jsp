@@ -30,18 +30,14 @@
 <section class="container" id="login" >
     <div class="row">
       <div class="col-md-6">
-        <form>
+        <form action="login" method="POST">
           <div class="form-group">
-            <label for="nombre">Nombre de usuario:</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre de usuario">
-          </div>
-          <div class="form-group">
-            <label for="nombre">Correo electronico</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Introduce tu nombre de usuario">
+            <label for="nombre">Username:</label>
+            <input type="text" class="form-control" id="nombre" name="username" placeholder="Introduce tu nombre de usuario">
           </div>
           <div class="form-group">
             <label for="contrasenia">Contraseña:</label>
-            <input type="password" class="form-control" id="contrasenia" name="contrasenia" placeholder="Introduce tu contraseña">
+            <input type="password" class="form-control" id="contrasenia" name="pass" placeholder="Introduce tu contraseña">
           </div> <br>
           <button type="submit" class="btn btn-primary">Iniciar sesión</button>
         </form>

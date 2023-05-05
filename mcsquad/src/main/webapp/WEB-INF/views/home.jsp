@@ -86,7 +86,7 @@
                 <p class="card-text">Descripcion del pluguin</p>
               </div>
               <div class="card-footer">
-                <a href="/path/to/your/file.pdf" download>Descargar el archivo</a>
+                <a href="resources/plugins/TpHubs.jar" download>Descargar el archivo</a>
               </div>
             </div>
             <div class="card">
@@ -96,7 +96,7 @@
                 <p class="card-text">Descripcion del Pluguin </p>
               </div>
               <div class="card-footer">
-                <a href="/path/to/your/file.pdf" download>Descargar el archivo</a>
+                <a href="resources/plugins/ManHunt.jar" download>Descargar el archivo</a>
               </div>
             </div>
             <div class="card">
@@ -106,7 +106,7 @@
                 <p class="card-text">Descripcion del pluguin</p>
               </div>
               <div class="card-footer">
-                <a href="/path/to/your/file.pdf" download>Descargar el archivo</a>
+                <a href="" download>Descargar el archivo</a>
               </div>
             </div>
           </div>
