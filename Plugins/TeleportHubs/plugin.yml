@@ -1,0 +1,25 @@
+name: TeleportHubs
+main: tphub.main.Main
+version: 1.2.0
+api: 1.19.2
+
+commands:
+  reload:
+    description: Comando para recargar el plugin
+    usage: /reload
+  hubhelp:
+    description: Comando de ayuda; muestra todos los comandos disponibles
+    usage: /hubhelp
+  tphub:
+   description: Comando para teletransportarse a un Hub
+   usage: /hub <hubname>
+  addhub:
+   description: Comando para agregar un punto de teletransportacion
+   usage: /addhub <hubname>
+  removehub: 
+   description: Comando para eliminar un punto de teletransportacion
+   usage: /removehub <hubname>
+  showhubs:
+   description: Comando para mostrar todas las hubs que se tienen
+   usage: /showhubs
+  

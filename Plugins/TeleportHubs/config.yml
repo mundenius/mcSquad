@@ -1,0 +1,4 @@
+Config:
+    mensaje-bienvenida: true
+    mensaje-bienvenida-texto: ""
+    

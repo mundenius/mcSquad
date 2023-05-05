@@ -1,0 +1,27 @@
+name: ManHunt
+main: manhunt.main.Main
+version: 2.0.0
+api: 1.19.2
+
+commands:
+   reload:
+    description: Comando para recargar el plugin
+    usage: /reload
+   helpme:
+    description: Comando de ayuda; muestra todos los comandos disponibles
+    usage: /helpme
+   cleanStart:
+    description: Comando para vaciar el inventario de todos los jugadores Online, y empezar denuevo el juego
+    usage: /cleanstart
+   addHunter:
+    description: Comando para agregar Hunters
+    usage: /addhunter <username>
+   showHunters:
+    description: Comando para mostrar a todos los Hunters
+    usage: /showhunters
+   removeHunter:
+    description: Comando para eliminar Hunters
+    usage: /removehunter <username>
+   switchNether:
+    description: Comando tipo toggle para activar o desactivar el tracking en el nether
+    usage: /switchnether

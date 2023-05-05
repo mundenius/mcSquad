@@ -1,0 +1,4 @@
+name: AssaultSquad
+main: as.main.Main
+version: 1.0.0
+api: 1.19.2
