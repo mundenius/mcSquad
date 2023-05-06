@@ -33,7 +33,7 @@
             <%-- Si el usuario está registrado, muestra su nombre de usuario y el botón de logout --%>
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
-              <b>Welcome, <%=username%></b>
+              <b><%=username%></b>
             </a>
             <ul class="dropdown-menu" aria-labelledby="userDropdown">
               <li>
