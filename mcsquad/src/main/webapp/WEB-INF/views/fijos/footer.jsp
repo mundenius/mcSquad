@@ -28,7 +28,7 @@
         </a>
 
         <!-- Github -->
-        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button" style="background-color: #24292E;">
+        <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/mundenius/mcSquad" role="button" style="background-color: #24292E;">
           <i class="fab fa-github"></i>
         </a>
       </section>
