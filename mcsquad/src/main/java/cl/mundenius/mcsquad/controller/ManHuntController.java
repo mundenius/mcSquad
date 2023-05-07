@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class ManHuntController {
 
 	@RequestMapping(value="/manhunt")
-	public ModelAndView test(HttpServletResponse response) throws IOException{
+	public ModelAndView manHunt(HttpServletResponse response) throws IOException{
 		return new ModelAndView("manhunt");
 	}
 }

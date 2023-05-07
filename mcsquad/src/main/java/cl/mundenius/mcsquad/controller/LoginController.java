@@ -21,7 +21,7 @@ import cl.mundenius.mcsquad.modelo.Usuario;
 public class LoginController {
 
 	@RequestMapping(value="/login", method= RequestMethod.GET)
-	public ModelAndView test(HttpServletResponse response) throws IOException{
+	public ModelAndView login(HttpServletResponse response) throws IOException{
 		System.out.println("Pasando por metodo GET");
 		return new ModelAndView("login");
 	}

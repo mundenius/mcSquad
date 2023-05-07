@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class AssaultSquadController {
 
 	@RequestMapping(value="/assaultsquad")
-	public ModelAndView as(HttpServletResponse response) throws IOException{
+	public ModelAndView assaultSquad(HttpServletResponse response) throws IOException{
 		return new ModelAndView("assaultsquad");
 	}
 }
