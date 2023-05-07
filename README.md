@@ -1,7 +1,7 @@
 # MC SQUAD
 ### Portafolio
 
-|Creador|git|
+|Desarrollador|GitHub|
 |-------|---|
 |Valentina Saldias|mundenius|
 
