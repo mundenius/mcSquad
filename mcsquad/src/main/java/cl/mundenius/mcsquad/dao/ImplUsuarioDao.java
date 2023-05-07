@@ -1,14 +1,20 @@
 package cl.mundenius.mcsquad.dao;
 
 import java.util.List;
+import java.util.ArrayList;
 
 import javax.sql.DataSource;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import cl.mundenius.mcsquad.interfaces.CRUD;
+import cl.mundenius.mcsquad.modelo.Administrativo;
+import cl.mundenius.mcsquad.modelo.Cliente;
 import cl.mundenius.mcsquad.modelo.Usuario;
 import cl.mundenius.mcsquad.dao.rowmappers.UsuarioRowMapper;
+import cl.mundenius.mcsquad.dao.rowmappers.AdminRowMapper;
+import cl.mundenius.mcsquad.dao.rowmappers.ClienteRowMapper;
+
 
 public class ImplUsuarioDao implements CRUD<Usuario>{
 
@@ -18,6 +24,19 @@ public class ImplUsuarioDao implements CRUD<Usuario>{
 		this.jdbcTemp = new JdbcTemplate(ds);
 	}
 
+	final String GETFORPASS = "SELECT * FROM usuario WHERE username = ? AND clave = ?;";
+	final String GETADMINS = "SELECT u.idusuario, u.username, u.nombre, u.apellido, u.fechanacimiento, u.clave, u.run, a.idadministrativo, a.area "
+			+ "FROM usuario u "
+			+ "LEFT JOIN administrativo a "
+			+ "ON u.run = a.rutadmin;";
+	final String GETCLIENTS = "SELECT u.idusuario, u.username, u.nombre, u.apellido, u.fechanacimiento, u.clave, u.run, c.idcliente, c.telefono, c.email "
+			+ "FROM usuario u "
+			+ "LEFT JOIN cliente c "
+			+ "ON u.run = c.rutcliente;";
+	final String INSERT_USUARIO = "INSERT INTO usuario VALUES (?,?,?,?,?,?);";
+	final String UPDATE = "UPDATE usuario SET username = ?, nombre = ?, apellido = ?, fechanacimiento = ?, clave = ? WHERE run = ?;";
+	final String DELETEBYRUN = "DELETE FROM usuario WHERE run = ?;";
+	
 	@Override
 	public Usuario getUserPass(String username, String pass) {
 
@@ -30,10 +49,28 @@ public class ImplUsuarioDao implements CRUD<Usuario>{
 
 	@Override
 	public List<Usuario> mostrarUsuarios() {
+		List<Usuario> usuarios = new ArrayList<>();
+	    List<Administrativo> administrativos = jdbcTemp.query(GETADMINS, new AdminRowMapper());
+	    System.out.println("creacion lista admin" + administrativos);
+	    List<Cliente> clientes = jdbcTemp.query(GETCLIENTS, new ClienteRowMapper());
+	    System.out.println("creacion lista clientes" + clientes);
+	    List<Integer> userIds = new ArrayList<>(); // lista temporal para almacenar los ID de los usuario
 
-		String sql = "SELECT * FROM usuario;";
-		List<Usuario> user = jdbcTemp.query(sql, new UsuarioRowMapper());
-		return user;
+	    for (Administrativo admin : administrativos) {
+	        if (!userIds.contains(admin.getIdUsuario())) {
+	            usuarios.add(admin);
+	            userIds.add(admin.getIdUsuario());
+	        }
+	    }
+
+	    for (Cliente cliente : clientes) {
+	        if (!userIds.contains(cliente.getIdUsuario())) {
+	            usuarios.add(cliente);
+	            userIds.add(cliente.getIdUsuario());
+	        }
+	    }
+
+	    return usuarios;
 	}
 
 	@Override

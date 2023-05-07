@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class ContactoController {
 
 	@RequestMapping(value="/contacto")
-	public ModelAndView test(HttpServletResponse response) throws IOException{
+	public ModelAndView contacto(HttpServletResponse response) throws IOException{
 		return new ModelAndView("contacto");
 	}
 	
