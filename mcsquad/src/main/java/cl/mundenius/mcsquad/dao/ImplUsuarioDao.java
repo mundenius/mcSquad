@@ -27,11 +27,11 @@ public class ImplUsuarioDao implements CRUD<Usuario>{
 	final String GETFORPASS = "SELECT * FROM usuario WHERE username = ? AND clave = ?;";
 	final String GETADMINS = "SELECT u.idusuario, u.username, u.nombre, u.apellido, u.fechanacimiento, u.clave, u.run, a.idadministrativo, a.area "
 			+ "FROM usuario u "
-			+ "LEFT JOIN administrativo a "
+			+ "INNER JOIN administrativo a "
 			+ "ON u.run = a.rutadmin;";
 	final String GETCLIENTS = "SELECT u.idusuario, u.username, u.nombre, u.apellido, u.fechanacimiento, u.clave, u.run, c.idcliente, c.telefono, c.email "
 			+ "FROM usuario u "
-			+ "LEFT JOIN cliente c "
+			+ "INNER JOIN cliente c "
 			+ "ON u.run = c.rutcliente;";
 	final String INSERT_USUARIO = "INSERT INTO usuario VALUES (?,?,?,?,?,?);";
 	final String UPDATE = "UPDATE usuario SET username = ?, nombre = ?, apellido = ?, fechanacimiento = ?, clave = ? WHERE run = ?;";
@@ -49,27 +49,10 @@ public class ImplUsuarioDao implements CRUD<Usuario>{
 
 	@Override
 	public List<Usuario> mostrarUsuarios() {
-		List<Usuario> usuarios = new ArrayList<>();
-	    List<Administrativo> administrativos = jdbcTemp.query(GETADMINS, new AdminRowMapper());
-	    System.out.println("creacion lista admin" + administrativos);
-	    List<Cliente> clientes = jdbcTemp.query(GETCLIENTS, new ClienteRowMapper());
-	    System.out.println("creacion lista clientes" + clientes);
-	    List<Integer> userIds = new ArrayList<>(); // lista temporal para almacenar los ID de los usuario
-
-	    for (Administrativo admin : administrativos) {
-	        if (!userIds.contains(admin.getIdUsuario())) {
-	            usuarios.add(admin);
-	            userIds.add(admin.getIdUsuario());
-	        }
-	    }
-
-	    for (Cliente cliente : clientes) {
-	        if (!userIds.contains(cliente.getIdUsuario())) {
-	            usuarios.add(cliente);
-	            userIds.add(cliente.getIdUsuario());
-	        }
-	    }
-
+	    List<Usuario> usuarios = new ArrayList<>();
+	    usuarios.addAll(jdbcTemp.query(GETADMINS, new AdminRowMapper()));
+	    usuarios.addAll(jdbcTemp.query(GETCLIENTS, new ClienteRowMapper()));
+	    System.out.println(String.valueOf(usuarios));
 	    return usuarios;
 	}
 

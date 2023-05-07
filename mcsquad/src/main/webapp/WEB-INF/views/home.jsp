@@ -22,12 +22,6 @@
 </head>
 
 <body id="bodyindex">
-
-	<!--            Navbar          -->
-	<nav>
-		<%@include file="fijos/navbar.jsp"%>
-	</nav>
-
 	<!--    Cuerpo de la paginaa   -->
 
 	<div class="card text-white" id="boycard1">
@@ -36,6 +30,11 @@
 			style="max-width: 70%; max-height: 70%; margin: auto;">
 		<div class="card-img-overlay"></div>
 	</div>
+
+	<!--            Navbar          -->
+	<nav>
+		<%@include file="fijos/navbar.jsp"%>
+	</nav>
 	<br>
 	<br>
 
@@ -66,7 +65,7 @@
 			<div class="col">
 				<img src="resources/imagenes/sinfondo2.png" alt="Imagen 3"
 					class="img-fluid" id="sinfondo3"> <br>
-				<br> <br>
+				<br> <br><br><br>
 				<h3>T Launcher</h3>
 				<p>TLauncher es un ejecutor de Minecraft que permite a los
 					usuarios acceder a diferentes versiones del juego y utilizar mods o

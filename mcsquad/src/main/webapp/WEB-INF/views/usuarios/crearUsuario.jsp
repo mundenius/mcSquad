@@ -20,8 +20,10 @@
   <%@include file="../fijos/navbar.jsp"%>
   </nav>
   
+    <!-- Cuerpo de la Pagina  -->
+  
 <div class="container">
-	<h2>Registro de Usuarios</h2>
+	<h2>Editar Usuario</h2>
 	<form action="crearUsuario" method="POST"> 
 		<div class="mb-3">
 			<label for="tipo_usuario" class="form-label">Tipo de usuario:</label>

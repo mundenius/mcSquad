@@ -22,14 +22,25 @@ public class ImplAdminDao implements CRUD<Administrativo>{
 		this.jdbcTemp = new JdbcTemplate(ds);
 	}
 	
-	final String GETFORPASS = "SELECT * FROM usuario WHERE username = ? AND clave = ?;";
-	final String GETALL = "SELECT u.idusuario, u.username, u.nombre, u.apellido, u.fechaNacimiento, u.clave, u.run, a.idadministrativo, a.area FROM usuario u INNER JOIN administrativo a ON u.run = a.rutadmin";
+	/**@category Sentencias MySQL
+	 * @param	Administrativo
+	 * Sentencias de mySQL para tratar con los tipo de usuario que son administrativos */
+	
+	final String GETFORPASS 	= "SELECT * FROM usuario WHERE username = ? AND clave = ?;";
+	final String GETALL 		= "SELECT u.idusuario, u.username, u.nombre, u.apellido, u.fechaNacimiento, u.clave, u.run, a.idadministrativo, a.area "
+								+ "FROM usuario u "
+								+ "INNER JOIN administrativo a "
+								+ "ON u.run = a.rutadmin";
 	final String INSERT_USUARIO = "INSERT INTO usuario(username, nombre, apellido, fechanacimiento, clave, run) VALUES (?,?,?,?,?,?);";
-	final String INSERT_ADMIN = "INSERT INTO administrativo(area, rutadmin) VALUES (?,?);";
+	final String INSERT_ADMIN 	= "INSERT INTO administrativo(area, rutadmin) VALUES (?,?);";
 	final String UPDATE_USUARIO = "UPDATE usuario SET username = ?, nombre = ?, apellido = ?, fechanacimiento = ?, clave = ? WHERE run = ?;";
-	final String UPDATE_ADMIN ="UPDATE administrativo SET area = ? WHERE rutadmin = ?";
-	final String DELETE_ADMIN = "DELETE FROM administrativo WHERE rutadmin = ?;";
-	final String DELETE_USUARIO = "DELETE FROM usuario WHERE run = ?";
+	final String UPDATE_ADMIN 	="UPDATE administrativo SET area = ? WHERE rutadmin = ?";
+	final String DELETE_ADMIN 	= "DELETE usuario, administrativo "
+								+ "FROM usuario "
+								+ "INNER JOIN administrativo"
+								+ "ON usuario.run = administrativo.rutadmin "
+								+ "WHERE usuario.run = ? AND usuario.clave = ?";
+//	final String DELETE_USUARIO = "DELETE FROM usuario WHERE run = ?";
 
 	@Override
 	public Usuario getUserPass(String username, String pass) {
@@ -70,8 +81,8 @@ public class ImplAdminDao implements CRUD<Administrativo>{
 		Object[] adminParams = {admin.getRun()};
 		jdbcTemp.update(DELETE_ADMIN, adminParams);
 
-		Object[] usuarioParams = {admin.getRun()};
-	    jdbcTemp.update(DELETE_USUARIO, usuarioParams);
+//		Object[] usuarioParams = {admin.getRun()};
+//	    jdbcTemp.update(DELETE_USUARIO, usuarioParams);
 	    
 		
 	}

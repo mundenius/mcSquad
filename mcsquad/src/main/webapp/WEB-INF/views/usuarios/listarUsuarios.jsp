@@ -26,7 +26,8 @@
 	</nav>
 
 	<div class="container">
-		<h1 class="mt-4">Lista de usuarios</h1>
+	<h1 class="mt-4">Lista de usuarios</h1>
+	<div class="table-responsive">
 		<table class="table table-striped table-hover">
 			<thead>
 				<tr>
@@ -65,7 +66,6 @@
 							<c:when test="${usuario.getClass().getName().equals('cl.mundenius.mcsquad.modelo.Cliente')}">
 								<td></td>
 								<td></td>
-								<td></td>
 								<td>${usuario.idCliente}</td>
 								<td>${usuario.telefono}</td>
 								<td>${usuario.email}</td>
@@ -84,6 +84,7 @@
 			</tbody>
 		</table>
 	</div>
+</div>
 
 	<!------------------ Footer ----------------->
 
