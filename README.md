@@ -33,5 +33,5 @@ En este proyecto en particular se propone un sitio web, en el cual se tendra acc
 - [ ] Plugin III: Assault Squad
 - [ ] Sitios Web
 - [x] Base de Datos
-- [ ] CRUD
+- [x] CRUD
 
