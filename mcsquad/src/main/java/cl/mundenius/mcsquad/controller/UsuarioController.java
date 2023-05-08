@@ -3,6 +3,7 @@ package cl.mundenius.mcsquad.controller;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -99,11 +100,36 @@ public class UsuarioController {
 	 * Despliegue de los usuarios en el archivo jsp */
 	
 	@RequestMapping(value="/listarUsuarios", method= RequestMethod.GET)
-	public String readUsuarios(Model model) {
-		List<Usuario> listaUsuarios = usuarioDao.mostrarUsuarios();
-	    System.out.println("listaUsuarios creada, pre insercion a JSP");
-		model.addAttribute("usuarios", listaUsuarios);
-	    return "usuarios/listarUsuarios";
+	public String readUsuarios(@RequestParam(value = "filtro", required = false) String filtro, Model model) {
+		 List<Usuario> listaUsuarios = new ArrayList<>();
+		 List<Administrativo> listaAdmin;
+		 List<Cliente> listaCliente;
+		    if (filtro != null) {
+		        switch (filtro) {
+		            case "clientes":
+		                listaCliente = cliDao.mostrarUsuarios();
+		                listaUsuarios.addAll(listaCliente);
+		                System.out.println(filtro);
+		                break;
+		            case "administrativos":
+		                listaAdmin = adminDao.mostrarUsuarios();
+		                listaUsuarios.addAll(listaAdmin);
+		                System.out.println(filtro);
+		                break;
+		            default:
+		                listaUsuarios = usuarioDao.mostrarUsuarios();
+		                System.out.println("default");
+		                break;
+		        }
+		    } else {
+		        listaUsuarios = usuarioDao.mostrarUsuarios();
+                System.out.println("else");
+
+		    }
+		    System.out.println("listaUsuarios creada, pre insercion a JSP");
+		    System.out.println(listaUsuarios);
+		    model.addAttribute("usuarios", listaUsuarios);
+		    return "usuarios/listarUsuarios";
     }
 	
 	

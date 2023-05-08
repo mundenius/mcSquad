@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a href="<c:url value='/'/>" class="nav-link"><b>Home</b></a>
+          <a href="<c:url value='/'/>" class="nav-link" ><b>Home</b></a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"

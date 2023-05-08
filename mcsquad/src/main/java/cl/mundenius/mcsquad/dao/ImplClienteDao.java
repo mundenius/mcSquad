@@ -42,6 +42,10 @@ public class ImplClienteDao implements CRUD<Cliente> {
 								+ "WHERE usuario.run = ? AND usuario.clave = ?;";
 	// final String DELETE_USUARIO = "DELETE FROM usuario WHERE run = ?";
 
+	/**@category	Metodo
+	 * @param	getUSerPass()
+	 * Metodo que retorna un usuario, si esque la contraseña y el nombre de usuario son correctos.
+	 *  */
 	@Override
 	public Usuario getUserPass(String username, String pass) {
 		String sql = "SELECT * FROM usuario WHERE username = ? AND clave = ?;";
@@ -51,12 +55,20 @@ public class ImplClienteDao implements CRUD<Cliente> {
 		return user;
 	}
 
+	/**@category	Metodo
+	 * @param	mostrarUsuarios()
+	 * Retorna una lista de Clientes
+	 *  */
 	@Override
 	public List<Cliente> mostrarUsuarios() {
 		List<Cliente> cliList = jdbcTemp.query(GETALL, new ClienteRowMapper());
 		return cliList;
 	}
 
+	/**@category	Metodo
+	 * @param	crearUsuario()
+	 * Con este metodo se crear usuarios del tipo cliente en la base de datos
+	 *  */
 	@Override
 	public void crearUsuario(Cliente cli) {
 		Object[] usuarioParams = { cli.getUsername(), cli.getNombre(), cli.getApellido(), cli.getFechaNacimiento(),
@@ -68,6 +80,10 @@ public class ImplClienteDao implements CRUD<Cliente> {
 
 	}
 
+	/**@category	Metodos
+	 * @param	editarUsuario()
+	 * Este metodo sirve para editar los datos dentro de la base de datos, utilizando el RUN como el identificador para ambas tablas
+	 *  */
 	@Override
 	public void editarUsuario(Cliente cli) {
 		Object[] usuarioParams = { cli.getUsername(), cli.getNombre(), cli.getApellido(), cli.getFechaNacimiento(),
@@ -79,6 +95,10 @@ public class ImplClienteDao implements CRUD<Cliente> {
 
 	}
 
+	/**@category	Metodo
+	 * @param	eliminarUsuario()
+	 * Se eliminan los datos de la base de datos, utilizando la clave y el run como parametros para confirmar la eliminacion de la fila. 
+	 *  */
 	@Override
 	public void eliminarUsuario(Cliente cli) {
 		Object[] cliparams = {cli.getRun(), cli.getClave() };

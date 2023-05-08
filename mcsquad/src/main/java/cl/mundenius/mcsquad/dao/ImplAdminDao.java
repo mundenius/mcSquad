@@ -42,6 +42,10 @@ public class ImplAdminDao implements CRUD<Administrativo>{
 								+ "WHERE usuario.run = ? AND usuario.clave = ?";
 //	final String DELETE_USUARIO = "DELETE FROM usuario WHERE run = ?";
 
+	/**@category	Metodo
+	 * @param	getUserPass()
+	 * Retorna un usuario, si esque la contraseña y el username son correctos
+	 *  */
 	@Override
 	public Usuario getUserPass(String username, String pass) {
 		Object[] keys = {username, pass};
@@ -50,12 +54,20 @@ public class ImplAdminDao implements CRUD<Administrativo>{
 		return user;
 	}
 
+	/**@category	Metodo
+	 * @param	mostrarUsuarios()
+	 * Metodo que genera una lista de los usuarios del tipo administrativo
+	 *  */
 	@Override
 	public List<Administrativo> mostrarUsuarios() {
 		List<Administrativo> adminList = jdbcTemp.query(GETALL, new AdminRowMapper());
 		return adminList;
 	}
 
+	/**@category	Metodo
+	 * @param	crearUsuario()
+	 * Este metodo permite crear administrativos dentro de la base de datos
+	 *  */
 	@Override
 	public void crearUsuario(Administrativo admin) {
 		Object[] usuarioParams = {admin.getUsername(), admin.getNombre(), admin.getApellido(), admin.getFechaNacimiento(), admin.getClave(), admin.getRun()};
@@ -66,6 +78,10 @@ public class ImplAdminDao implements CRUD<Administrativo>{
 		
 	}
 
+	/**@category	Metodo
+	 * @param	editarUsuario()
+	 * Con este metodo se puede actualizar o editar a los usuarios del tipo administrativo
+	 *  */
 	@Override
 	public void editarUsuario(Administrativo admin) {
 		Object[] usuarioParams = {admin.getUsername(), admin.getNombre(), admin.getApellido(), admin.getFechaNacimiento(), admin.getClave(), admin.getRun()};
@@ -76,9 +92,15 @@ public class ImplAdminDao implements CRUD<Administrativo>{
 		
 	}
 
+	
+	/**@category	Metodo
+	 * @param	eliminarUsuario()
+	 * Permite la eliminacion del administrativo, con la condicion de que el run con la contraseña esten correctos
+	 *  */
 	@Override
 	public void eliminarUsuario(Administrativo admin) {
-		Object[] adminParams = {admin.getRun()};
+		Object[] adminParams = {admin.getRun(), admin.getClave()};
+		System.out.println(admin.getRun() + admin.getClave());
 		jdbcTemp.update(DELETE_ADMIN, adminParams);
 
 //		Object[] usuarioParams = {admin.getRun()};

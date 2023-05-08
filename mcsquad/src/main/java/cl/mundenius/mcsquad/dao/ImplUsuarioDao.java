@@ -37,6 +37,11 @@ public class ImplUsuarioDao implements CRUD<Usuario>{
 	final String UPDATE = "UPDATE usuario SET username = ?, nombre = ?, apellido = ?, fechanacimiento = ?, clave = ? WHERE run = ?;";
 	final String DELETEBYRUN = "DELETE FROM usuario WHERE run = ?;";
 	
+	
+	/**@category	Metodo
+	 * @param	getUserPass()
+	 * Este metodo retorna un usuario, si esque la contraseña y el username son correctos
+	 *  */
 	@Override
 	public Usuario getUserPass(String username, String pass) {
 
@@ -47,6 +52,11 @@ public class ImplUsuarioDao implements CRUD<Usuario>{
 		return user;
 	}
 
+	
+	/**@category	Metodo
+	 * @param	mostrarUsuarios()
+	 * Este metodo retorna una lista con todos los usuarios y sus datos especificos correspondientes, ya sea para administrativo o cliente
+	 *  */
 	@Override
 	public List<Usuario> mostrarUsuarios() {
 	    List<Usuario> usuarios = new ArrayList<>();

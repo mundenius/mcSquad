@@ -36,11 +36,11 @@ private Main plugin;
 				
 				if(label.equalsIgnoreCase("hubhelp")) {
 					jugador.sendMessage(ChatColor.BOLD + "Comandos disponibles:" 
-							+ChatColor.GOLD +"\n/hubhelp   " + ChatColor.WHITE + "Muestra todos los comandos disponibles\n"
-							+ChatColor.GOLD +"/reload   " +ChatColor.WHITE + "Recarga el plugin\n"
-							+ChatColor.GOLD +"/addhub nombreHub   " +ChatColor.WHITE + "Agrega la posicion en la que estas como hub a tu listado de Hubs disponibles\n" 
-							+ChatColor.GOLD +"/removehub nombreHub   " +ChatColor.WHITE + "Elimina hubs de la lista de Hubs disponibles\n"
-							+ChatColor.GOLD +"/showhubs   " +ChatColor.WHITE + "Muestra todas las Hubs que tienes disponibles\n");
+							+ChatColor.GREEN +"\n/hubhelp   " + ChatColor.WHITE + "Muestra todos los comandos disponibles\n"
+							+ChatColor.GREEN +"/reload   " +ChatColor.WHITE + "Recarga el plugin\n"
+							+ChatColor.GREEN +"/addhub nombreHub   " +ChatColor.WHITE + "Agrega la posicion en la que estas como hub a tu listado de Hubs disponibles\n" 
+							+ChatColor.GREEN +"/removehub nombreHub   " +ChatColor.WHITE + "Elimina hubs de la lista de Hubs disponibles\n"
+							+ChatColor.GREEN +"/showhubs   " +ChatColor.WHITE + "Muestra todas las Hubs que tienes disponibles\n");
 				}
 				
 			}else {

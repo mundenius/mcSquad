@@ -25,26 +25,48 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<h2>ManHunt: Caza de Hombres</h2>
-				<p>Este plugin te permite asignar un rol de cazador a ti y a tus
-					amigos. Cada cazador tendra una brujula que podra usar para hacerle
-					seguimiento a cualquier jugador en survival. Tiene la opcion de
-					desactivar el seguimiento en el Nether, y cada vez que se hace
-					click en la brujula, se hace seguimiento a un jugador distinto.
-					También esta incluido el comanod "/cleanstart", que te permitirá
-					partir desde cero, pero asegurandose de que se le restituyan las
-					brujulas a los cazadores.</p>
+				<h2 class="display-3">ManHunt: Caza de Hombres</h2>
+				<p class="lead">Este plugin te permite asignar un rol de cazador
+					a ti y a tus amigos. Cada cazador tendra una brujula que podra usar
+					para hacerle seguimiento a cualquier jugador en survival. Tiene la
+					opcion de desactivar el seguimiento en el Nether, y cada vez que se
+					hace click en la brujula, se hace seguimiento a un jugador
+					distinto. También esta incluido el comanod "/cleanstart", que te
+					permitirá partir desde cero, pero asegurandose de que se le
+					restituyan las brujulas a los cazadores.</p>
 				<div class="card-group">
 					<div class="card">
-							<img class="card-img-top"
-								src="resources/imagenes/minecraft1.jpg" alt="Card image cap">
+						<div id="carouselExampleControls" class="carousel slide"
+							data-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img class="d-block w-100" src="..." alt="First slide">
+								</div>
+								<div class="carousel-item">
+									<img class="d-block w-100" src="..." alt="Second slide">
+								</div>
+								<div class="carousel-item">
+									<img class="d-block w-100" src="..." alt="Third slide">
+								</div>
+							</div>
+							<a class="carousel-control-prev" href="#carouselExampleControls"
+								role="button" data-slide="prev"> <span
+								class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+								class="sr-only">Anterior</span>
+							</a> <a class="carousel-control-next" href="#carouselExampleControls"
+								role="button" data-slide="next"> <span
+								class="carousel-control-next-icon" aria-hidden="true"></span> <span
+								class="sr-only">Siguiente</span>
+							</a>
+						</div>
 						<div class="card-body" id="cartas">
-							<h3 class="card-title">MANHUNT</h3>
-							<p class="card-text">Caza a tus amigos, mientras intentan
-								conseguir diamantes o matar al dragón.</p>
+							<h3 class="card-title display-4">MANHUNT</h3>
+							<p class="card-text lead">Caza a tus amigos, mientras
+								intentan conseguir diamantes o matar al dragón.</p>
 						</div>
 						<div class="card-footer">
-							<a href="resources/plugins/ManHunt.jar" download>Descarga el archivo</a> 
+							<a class="btn btn-secondary" href="resources/plugins/ManHunt.jar"
+								download>Descarga el archivo</a>
 						</div>
 					</div>
 				</div>

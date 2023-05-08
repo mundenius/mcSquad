@@ -25,7 +25,7 @@
 
 <div class="container">
 	<h2>Editar Usuarios</h2>
-	<form action="crearUsuario" method="POST"> 
+	<form action="editarUsuario" method="POST"> 
 		<div class="mb-3">
 			<label for="tipo_usuario" class="form-label">Tipo de usuario:</label>
 			<select id="tipo_usuario" class="form-select" onchange="mostrarCampos()" name="tipo_usuario">
@@ -80,7 +80,7 @@
 			</div>
 		</div>
 
-		<button type="submit" class="btn btn-primary">Registrarse</button>
+		<button type="submit" class="btn btn-success btn-block">Registrarse</button>
 	</form>
 </div>
 

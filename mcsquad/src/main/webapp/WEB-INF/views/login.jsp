@@ -39,7 +39,7 @@
             <label for="contrasenia">Contraseña:</label>
             <input type="password" class="form-control" id="contrasenia" name="pass" placeholder="Introduce tu contraseña">
           </div> <br>
-          <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+          <button type="submit" class="btn btn-success btn-block">Iniciar sesión</button>
         </form>
       </div>
       <div class="col-md-6">

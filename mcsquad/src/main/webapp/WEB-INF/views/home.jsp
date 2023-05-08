@@ -45,7 +45,7 @@
 				<img src="resources/imagenes/sinfondo1.png" alt="Imagen 1"
 					class="img-fluid" id="sinfondo1">
 				<h3>Minecraft 1.20</h3>
-				<p>La próxima actualizacion para el Minecraft incluye nuevos
+				<p class="lead">La próxima actualizacion para el Minecraft incluye nuevos
 					mobs como el camello y el sniffler; nuevas mecánicas con las
 					armaduras y minerales que se encuentran tanto en el Overworld como
 					en el Nether. Actualmente estan saliendo snapshots todos los
@@ -56,7 +56,7 @@
 				<img src="resources/imagenes/sinfondo4.png" alt="Imagen 2"
 					class="img-fluid" id="sinfondo2">
 				<h3>Spigot Servers</h3>
-				<p>Spigot es un software de servidor de Minecraft que se utiliza
+				<p class="lead">Spigot es un software de servidor de Minecraft que se utiliza
 					para crear y alojar servidores personalizados de Minecraft. Se
 					ejecuta en Java y utiliza la API Bukkit para permitir a los
 					desarrolladores crear plugins que agreguen funcionalidad
@@ -67,7 +67,7 @@
 					class="img-fluid" id="sinfondo3"> <br>
 				<br> <br><br><br>
 				<h3>T Launcher</h3>
-				<p>TLauncher es un ejecutor de Minecraft que permite a los
+				<p class="lead">TLauncher es un ejecutor de Minecraft que permite a los
 					usuarios acceder a diferentes versiones del juego y utilizar mods o
 					plugins. Es un software gratuito y fácil de usar, es popular entre
 					los jugadores de Minecraft porque ofrece una amplia variedad de
@@ -79,7 +79,7 @@
 				<img src="resources/imagenes/logo1.png" alt="Imagen 4"
 					class="img-fluid" id="sinfondo4"><br> <br> 
 				<h3>Plugins</h3>
-				<p>Los plugins de Minecraft son pequeñas aplicaciones o
+				<p class="lead">Los plugins de Minecraft son pequeñas aplicaciones o
 					programas que se utilizan para agregar nuevas características y
 					funcionalidades a un servidor de Minecraft. Los plugins se ejecutan
 					en el servidor y pueden cambiar o mejorar la forma en que los
@@ -117,10 +117,10 @@
 							<div class="card-body" id="cartas">
 								<h5 class="card-title">Teleport Hubs: Centros de
 									Teletransportacion</h5>
-								<p class="card-text">Crea tus centros de teletransportacion para que jamás vuelvas a perderte</p>
+								<p class="card-text lead" >Crea tus centros de teletransportacion para que jamás vuelvas a perderte</p>
 							</div>
 							<div class="card-footer">
-								<a href="resources/plugins/TpHubs.jar" download>Descargar el
+								<a class="btn btn-secondary" href="resources/plugins/TpHubs.jar" download>Descargar el
 									archivo</a>
 							</div>
 						</div>
@@ -129,11 +129,11 @@
 								alt="Card image cap">
 							<div class="card-body" id="cartas">
 								<h5 class="card-title">ManHunt: Caza de Hombres</h5>
-								<p class="card-text">Caza a tus amigos, mientras intentan
+								<p class="card-text lead">Caza a tus amigos, mientras intentan
 								conseguir diamantes o matar al dragón.</p>
 							</div>
 							<div class="card-footer">
-								<a href="resources/plugins/ManHunt.jar" download>Descargar
+								<a class="btn btn-secondary" href="resources/plugins/ManHunt.jar" download>Descargar
 									el archivo</a>
 							</div>
 						</div>
@@ -142,10 +142,10 @@
 								alt="Card image cap">
 							<div class="card-body" id="cartas">
 								<h5 class="card-title">Assault Squad</h5>
-								<p class="card-text">Modo Asalto: Hay un limite de tiempo, y un maximo de kills; tu decides quien gana</p>
+								<p class="card-text lead">Modo Asalto: Hay un limite de tiempo, y un maximo de kills; tu decides quien gana</p>
 							</div>
 							<div class="card-footer">
-								<a href="" download>Descargar el archivo</a>
+								<a class="btn btn-secondary" href="" download>Descargar el archivo</a>
 							</div>
 						</div>
 					</div>

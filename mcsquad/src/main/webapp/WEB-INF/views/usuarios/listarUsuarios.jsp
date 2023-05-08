@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<% System.out.println("ListarUsuarios JSP encontrado"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,66 +27,112 @@
 	</nav>
 
 	<div class="container">
-	<h1 class="mt-4">Lista de usuarios</h1>
-	<div class="table-responsive">
-		<table class="table table-striped table-hover">
-			<thead>
-				<tr>
-					<th>ID Usuario</th>
-					<th>Username</th>
-					<th>Nombre</th>
-					<th>Apellido</th>
-					<th>Fecha Nacimiento</th>
-					<th>Clave</th>
-					<th>RUN</th>
-					<th>ID Administrativo</th>
-					<th>Área</th>
-					<th>ID Cliente</th>
-					<th>Teléfono</th>
-					<th>Email</th>
-				</tr>
-			</thead>
-			<tbody>
-				<c:forEach var="usuario" items="${usuarios}">
+		<h1 class="mt-4">Lista de usuarios</h1>
+		<div class="btn-group mb-3" role="group" aria-label="Filtros">
+			<a href="../usuarios/listarUsuarios" class="btn btn-light">Todos</a>
+			<a href="../usuarios/listarUsuarios?filtro=clientes" class="btn btn-light">Cliente</a>
+			<a href="../usuarios/listarUsuarios?filtro=administrativos" class="btn btn-light">Administrativos</a>
+		</div>
+		<div class="table-responsive">
+			<table class="table table-striped table-hover">
+				<thead>
 					<tr>
-						<td>${usuario.idUsuario}</td>
-						<td>${usuario.username}</td>
-						<td>${usuario.nombre}</td>
-						<td>${usuario.apellido}</td>
-						<td>${usuario.fechaNacimiento}</td>
-						<td>${usuario.clave}</td>
-						<td>${usuario.run}</td>
-						<c:choose>
-							<c:when test="${usuario.getClass().getName().equals('cl.mundenius.mcsquad.modelo.Administrativo')}">
-								<td>${usuario.idAdmin}</td>
-								<td>${usuario.area}</td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</c:when>
-							<c:when test="${usuario.getClass().getName().equals('cl.mundenius.mcsquad.modelo.Cliente')}">
-								<td></td>
-								<td></td>
-								<td>${usuario.idCliente}</td>
-								<td>${usuario.telefono}</td>
-								<td>${usuario.email}</td>
-							</c:when>
-							<c:otherwise>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-								<td></td>
-							</c:otherwise>
-						</c:choose>
+						<th>ID Usuario</th>
+						<th>Username</th>
+						<th>Nombre</th>
+						<th>Apellido</th>
+						<th>Fecha Nacimiento</th>
+						<th>Clave</th>
+						<th>RUN</th>
+						<th>ID Administrativo</th>
+						<th>Área</th>
+						<th>ID Cliente</th>
+						<th>Teléfono</th>
+						<th>Email</th>
 					</tr>
-				</c:forEach>
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+					<c:choose>
+						<c:when test="${filtro == 'todos' || filtro == null}">
+							<c:forEach var="usuario" items="${usuarios}">
+								<tr>
+									<td>${usuario.idUsuario}</td>
+									<td>${usuario.username}</td>
+									<td>${usuario.nombre}</td>
+									<td>${usuario.apellido}</td>
+									<td>${usuario.fechaNacimiento}</td>
+									<td>${usuario.clave}</td>
+									<td>${usuario.run}</td>
+									<c:choose>
+										<c:when
+											test="${usuario.getClass().getName().equals('cl.mundenius.mcsquad.modelo.Administrativo')}">
+											<td>${usuario.idAdmin}</td>
+											<td>${usuario.area}</td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</c:when>
+										<c:when
+											test="${usuario.getClass().getName().equals('cl.mundenius.mcsquad.modelo.Cliente')}">
+											<td></td>
+											<td></td>
+											<td>${usuario.idCliente}</td>
+											<td>${usuario.telefono}</td>
+											<td>${usuario.email}</td>
+										</c:when>
+										<c:otherwise>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</c:otherwise>
+									</c:choose>
+								</tr>
+							</c:forEach>
+						</c:when>
+						<c:when test="${filtro == 'administrativos'}">
+							<c:forEach var="usuario" items="${usuarios}">
+								<tr>
+									<td>${usuario.idUsuario}</td>
+									<td>${usuario.username}</td>
+									<td>${usuario.nombre}</td>
+									<td>${usuario.apellido}</td>
+									<td>${usuario.fechaNacimiento}</td>
+									<td>${usuario.clave}</td>
+									<td>${usuario.run}</td>
+									<td>${usuario.idAdmin}</td>
+									<td>${usuario.area}</td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</c:forEach>
+						</c:when>
+						<c:when test="${filtro == 'clientes'}">
+							<c:forEach var="usuario" items="${usuarios}">
+								<tr>
+									<td>${usuario.idUsuario}</td>
+									<td>${usuario.username}</td>
+									<td>${usuario.nombre}</td>
+									<td>${usuario.apellido}</td>
+									<td>${usuario.fechaNacimiento}</td>
+									<td>${usuario.clave}</td>
+									<td>${usuario.run}</td>
+									<td></td>
+									<td></td>
+									<td>${usuario.idCliente}</td>
+									<td>${usuario.telefono}</td>
+									<td>${usuario.email}</td>
+								</tr>
+							</c:forEach>
+						</c:when>
+					</c:choose>
+				</tbody>
+			</table>
+		</div>
 	</div>
-</div>
-
 	<!------------------ Footer ----------------->
 
 	<footer>

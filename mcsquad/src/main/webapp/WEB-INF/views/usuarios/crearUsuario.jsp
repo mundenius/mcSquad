@@ -79,7 +79,7 @@
 			</div>
 		</div>
 
-		<button type="submit" class="btn btn-primary">Registrarse</button>
+		<button type="submit" class="btn btn-success btn-block">Registrarse</button>
 	</form>
 </div>
   <!------------------ Footer ----------------->

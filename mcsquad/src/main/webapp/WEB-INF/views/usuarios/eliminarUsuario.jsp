@@ -43,7 +43,7 @@
 			<label for="clave" class="form-label">Contraseña:</label>
 			<input type="password" class="form-control" id="clave" name="clave">
 		</div>
-		<button type="submit" class="btn btn-primary">Eliminar Usuario</button>
+		<button type="submit" class="btn btn-danger btn-block">Eliminar Usuario</button>
 	</form>
 </div>
   <!------------------ Footer ----------------->
