@@ -25,13 +25,17 @@ area varchar(20) not null,
 rutadmin varchar(10) not null
 );
 
-alter table administrativo add 
-constraint fk_rutadmin 
-foreign key(rutadmin) references usuario(run);
+ALTER TABLE administrativo
+ADD CONSTRAINT fk_rutadmin
+FOREIGN KEY (rutadmin)
+REFERENCES usuario(run)
+ON DELETE CASCADE;
 
-alter table cliente add 
-constraint fk_rutcliente 
-foreign key(rutcliente) references usuario(run);
+ALTER TABLE cliente
+ADD CONSTRAINT fk_rutcliente
+FOREIGN KEY (rutcliente)
+REFERENCES usuario(run)
+ON DELETE CASCADE;
 
 INSERT INTO usuario values (1, 'mundenius', 'Valentina', 'Saldias', '1997-07-20',  'gryffindor', '19616866-4');
 INSERT INTO administrativo values (1, 'gerencia', '19616866-4');
