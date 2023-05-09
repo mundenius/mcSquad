@@ -10,7 +10,7 @@ import cl.mundenius.mcsquad.modelo.Usuario;
 public class UsuarioRowMapper implements RowMapper<Usuario>{
 
 	@Override
-	public Usuario mapRow(ResultSet rs, int rowNr) throws SQLException{
+	public Usuario mapRow(ResultSet rs, int colNr) throws SQLException{
 		Usuario user = new Usuario();
 		user.setIdUsuario(rs.getInt(1));
 		user.setUsername(rs.getString(2));

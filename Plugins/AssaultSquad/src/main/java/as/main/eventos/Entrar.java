@@ -30,6 +30,6 @@ private Main plugin;
 			 jugador.sendMessage(ChatColor.translateAlternateColorCodes('&', config.getString(texto)).replaceAll("%", jugador.getName()));
 			 Bukkit.getConsoleSender().sendMessage(config.getString(texto));
 		 }
-		 jugador.sendMessage(ChatColor.DARK_GREEN + "\n/hubhelp para conocer los comandos del plugin");
+		 jugador.sendMessage(ChatColor.DARK_GREEN + "\n/squadhelp para conocer los comandos del plugin");
 	}
 }

@@ -3,12 +3,13 @@ package as.main.comandos;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 import as.main.Main;
 
-public class CommHelp {
+public class CommHelp implements CommandExecutor{
 
 	private Main plugin; 
 	
@@ -32,22 +33,23 @@ public class CommHelp {
 				// /help smthng  1 args
 				
 				
-				if(label.equalsIgnoreCase("hubhelp")) {
+				if(label.equalsIgnoreCase("squadhelp")) {
 					jugador.sendMessage(ChatColor.BOLD + "Comandos disponibles:" 
-							+ChatColor.GOLD +"\n/ashelp   " + ChatColor.WHITE + "Muestra todos los comandos disponibles\n"
-							+ChatColor.GOLD +"/reload   " +ChatColor.WHITE + "Recarga el plugin\n"
-							+ChatColor.GOLD +"/addteam teamName   " +ChatColor.WHITE + "Agrega un equipo\n" 
-							+ChatColor.GOLD +"/removeteam teamName   " +ChatColor.WHITE + "Elimina un equipo\n"
-							+ChatColor.GOLD +"/showteams   " +ChatColor.WHITE + "Muestra todos los equipos\n"
-							+ChatColor.GOLD +"/teamName addmate userName   " +ChatColor.WHITE + "Agrega un integrante al equipo seleccionado\n"
-							+ChatColor.GOLD +"/teamName removemate userName  " +ChatColor.WHITE + "Elimina un integrante del equipo seleccionado\n"
-							+ChatColor.GOLD +"/showmates teamName   " +ChatColor.WHITE + "Muestra todos los integrantes del equipo seleccionado\n"
-							+ChatColor.GOLD +"/start   " +ChatColor.WHITE + "Comienza el juego\n"
+							+ChatColor.DARK_AQUA +"\n/ashelp   " + ChatColor.WHITE + "Muestra todos los comandos disponibles\n"
+							+ChatColor.DARK_AQUA +"/reload   " +ChatColor.WHITE + "Recarga el plugin\n"
+							+ChatColor.DARK_AQUA +"/addteam teamName   " +ChatColor.WHITE + "Agrega un equipo\n" 
+							+ChatColor.DARK_AQUA +"/removeteam teamName   " +ChatColor.WHITE + "Elimina un equipo\n"
+							+ChatColor.DARK_AQUA +"/showteams   " +ChatColor.WHITE + "Muestra todos los equipos\n"
+							+ChatColor.DARK_AQUA +"/teamName addmate userName   " +ChatColor.WHITE + "Agrega un integrante al equipo seleccionado\n"
+							+ChatColor.DARK_AQUA +"/teamName removemate userName  " +ChatColor.WHITE + "Elimina un integrante del equipo seleccionado\n"
+							+ChatColor.DARK_AQUA +"/showmates teamName   " +ChatColor.WHITE + "Muestra todos los integrantes del equipo seleccionado\n"
+							+ChatColor.DARK_AQUA +"/start   " +ChatColor.WHITE + "Comienza el juego\n"
+							+ChatColor.DARK_AQUA +"/pause   " +ChatColor.WHITE + "Pausa el temporizador el juego\n"
 							);
 				}
 				
 			}else {
-				jugador.sendMessage(ChatColor.WHITE + "Comando incorrecto; utiliza /ashelp");
+				jugador.sendMessage(ChatColor.WHITE + "Comando incorrecto; utiliza /squadhelp");
 			}
 		}
 		return true;
