@@ -65,7 +65,7 @@
 
 	<!------------------ Footer ----------------->
 
-	<footer>
+	<footer class="fixed-bottom">
 		<%@include file="fijos/footer.jsp"%>
 	</footer>
 

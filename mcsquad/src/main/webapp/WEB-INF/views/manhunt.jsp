@@ -22,10 +22,12 @@
 		<%@include file="fijos/navbar.jsp"%>
 	</nav>
 
-	<div class="container">
+	<div class="container mt-4">
 		<div class="row">
-			<div class="col">
-				<h2 class="display-3">ManHunt: Caza de Hombres</h2>
+			<div class="col-md-9">
+				<h2 class="display-3">
+					<b> ManHunt: Caza de Hombres</b>
+				</h2>
 				<p class="lead">Este plugin te permite asignar un rol de cazador
 					a ti y a tus amigos. Cada cazador tendra una brujula que podra usar
 					para hacerle seguimiento a cualquier jugador en survival. Tiene la
@@ -39,28 +41,28 @@
 					<div class="carousel-inner">
 						<div class="carousel-item active">
 							<img class="d-block w-100"
-								src="resources/imagenes/manhunt/Captura de pantalla 2023-05-08 163447.png"
-								alt="First slide">
+								src="resources/imagenes/manhunt/helpcomm.png" alt="First slide">
 						</div>
 						<div class="carousel-item">
 							<img class="d-block w-100"
-								src="resources/imagenes/manhunt/Captura de pantalla 2023-05-08 163447.png"
-								alt="Second slide">
+								src="resources/imagenes/manhunt/tracking.png" alt="Second slide">
 						</div>
 						<div class="carousel-item">
 							<img class="d-block w-100"
-								src="resources/imagenes/manhunt/Captura de pantalla 2023-05-08 170535.png"
-								alt="Third slide">
+								src="resources/imagenes/manhunt/malaya.png" alt="Third slide">
 						</div>
 						<div class="carousel-item">
 							<img class="d-block w-100"
-								src="resources/imagenes/manhunt/Captura de pantalla 2023-05-08 171009.png"
+								src="resources/imagenes/manhunt/multitracking.png"
 								alt="Fourth slide">
 						</div>
 						<div class="carousel-item">
 							<img class="d-block w-100"
-								src="resources/imagenes/manhunt/Captura de pantalla 2023-05-08 171214.png"
-								alt="Fifth slide">
+								src="resources/imagenes/manhunt/mamaro.png" alt="Fifth slide">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100"
+								src="resources/imagenes/manhunt/oopsi.png" alt="Sixth slide">
 						</div>
 					</div>
 					<a class="carousel-control-prev" href="#carouselExampleControls"
@@ -73,10 +75,14 @@
 						class="sr-only">Siguiente</span>
 					</a>
 				</div>
+				<br>
+				<br>
 				<div class="card-group">
 					<div class="card">
 						<div class="card-body" id="cartas">
-							<h3 class="card-title display-4">MANHUNT</h3>
+							<h3 class="card-title display-4">
+								<b> MANHUNT</b>
+							</h3>
 							<p class="card-text lead">Caza a tus amigos, mientras
 								intentan conseguir diamantes o matar al dragón.</p>
 						</div>
@@ -87,8 +93,68 @@
 					</div>
 				</div>
 			</div>
+			<div class="col">
+				<br> <br>
+				<div>
+					<section>
+						<h3>
+							<b> Sobre el Proyecto </b>
+						</h3>
+						<dl>
+							<dt>Creado</dt>
+							<dd>
+								<span>19 de Abril 2023</span>
+							</dd>
+							<dt>Updated</dt>
+							<dd>
+								<span>8 de Mayo 2023</span>
+							</dd>
+						</dl>
+					</section>
+					<section id="versions-summary">
+						<h3>
+							<b>Game Versions</b>
+						</h3>
+						<use href="/images/sprite.svg#icon-small-chevron-right"></use>
+
+						<ul class="links" id="project-versions">
+							<li id="version-item"><a>1.19.2</a></li>
+							<li id="version-item"><a>1.19.1</a></li>
+							<li id="version-item"><a>1.19</a></li>
+							<li id="version-item"><a>1.18.2</a></li>
+							<li class="extra">+ 38 Versions</li>
+						</ul>
+					</section>
+					<section id="project-categories">
+						<h3>
+							<b>Categories</b>
+						</h3>
+						<ul class="links">
+							<li><a>Nuevos Comandos</a></li>
+							<li><a>Tags</a></li>
+							<li><a>Funcionalidad</a></li>
+							<li><a>Juego</a></li>
+							<li><a>Plugin</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>
+							<b>Main File</b>
+						</h3>
+						<div class="file-card">
+							<h5 title="ManHunt 1.19.2">ManHunt: Caza de Hombres</h5>
+							<ul class="file-details-list">
+								<li><span class=" channel-tag release">Release</span></li>
+								<li>8 de Mayo 2023</li>
+							</ul>
+						</div>
+					</section>
+				</div>
+			</div>
 		</div>
 	</div>
+	<br>
+	<br>
 
 	<footer>
 		<%@include file="fijos/footer.jsp"%>

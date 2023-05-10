@@ -14,20 +14,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <title>Eliminar Usuario</title>
 </head>
-<body>
+<body id="bodyindex">
 <!--            Navbar          -->
   <nav>
   <%@include file="../fijos/navbar.jsp"%>
   </nav>
   
     <!-- Cuerpo de la Pagina  -->
-  
+  <br><br>
 <div class="container">
-	<h2>Editar Usuario</h2>
+	<h2>Eliminar Usuario</h2>
 	<form action="eliminarUsuario" method="POST"> 
 		<div class="mb-3">
 			<label for="tipo_usuario" class="form-label">Tipo de usuario:</label>
-			<select id="tipo_usuario" class="form-select" onchange="mostrarCampos()" name="tipo_usuario">
+			<select id="tipo_usuario" class="form-select" onchange="mostrarCampos()" name="tipo_usuario" required>
 				<option value="">Seleccione una opción</option>
 				<option value="cliente">Cliente</option>
 				<option value="administrativo">Administrativo</option>
@@ -46,6 +46,7 @@
 		<button type="submit" class="btn btn-danger btn-block">Eliminar Usuario</button>
 	</form>
 </div>
+<br><br>
   <!------------------ Footer ----------------->
 
   <footer>

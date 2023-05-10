@@ -1,6 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
-
-<nav class="navbar navbar-expand-lg" id="navbar">
+<div class="card text-white" id="boycard1">
+        <img class="card-img banner-img" src="<c:url value='/resources/imagenes/ejemplo1.png'/>" alt="Card image">
+        <div class="card-img-overlay"></div>
+</div>
+<nav class="navbar navbar-expand-lg center-text" id="navbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="<c:url value='/'/>" class="nav-link"><img src="<c:url value='/resources/imagenes/logom.png'/>" alt="Logo" id="logo"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
