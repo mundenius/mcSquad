@@ -30,8 +30,8 @@ En este proyecto en particular se propone un sitio web, en el cual se tendra acc
 #### Objetivos a Cumplir
 - [x] Plugin I: ManHunt
 - [x] Plugin II: Teleport Hubs
-- [ ] Plugin III: Assault Squad
-- [ ] Sitios Web
+- [ ] Plugin III: Assault Squad: EN PROCESO
+- [x] Sitios Web
 - [x] Base de Datos
 - [x] CRUD
 
