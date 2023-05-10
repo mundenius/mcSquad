@@ -1,18 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="5;url=<c:url value='/usuarios/listarUsuario'/>">
- <!--   etiquetas de Bootstrap  -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../resources/style.css">
+<meta http-equiv="refresh"
+	content="5;url=<c:url value='/usuarios/listarUsuarios'/>">
+<!--   etiquetas de Bootstrap  -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+	crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../resources/style.css">
 
-  <!--   Iconos de footer -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<!--   Iconos de footer -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <title>Insert title here</title>
 </head>
 <body>
@@ -32,7 +39,8 @@
 							correctamente en nuestra base de datos. Redireccionando a lista
 							de usuarios</p>
 						<div class="text-center mt-4">
-							<a href="<c:url value='/'/>" class="btn btn-primary">Volver a inicio</a>
+							<a href="<c:url value='/'/>" class="btn btn-primary">Volver a
+								inicio</a>
 						</div>
 					</div>
 				</div>
@@ -43,10 +51,10 @@
 	<!-- footer  -->
 
 	<%@include file="../fijos/footer.jsp"%>
-	
-	
-<script src="../resources/main.js"></script>
- <!-- Enlace al archivo JavaScript de jQuery -->
+
+
+	<script src="../resources/main.js"></script>
+	<!-- Enlace al archivo JavaScript de jQuery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 
 	<!-- Enlace al archivo JavaScript de Bootstrap -->
@@ -63,6 +71,6 @@
 		integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
 		crossorigin="anonymous"></script>
 
-	
+
 </body>
 </html>

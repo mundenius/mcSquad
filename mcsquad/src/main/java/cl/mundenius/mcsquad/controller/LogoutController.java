@@ -28,6 +28,6 @@ public class LogoutController {
 	    HttpSession session = request.getSession();
 	    System.out.println("Se ha Deslogueado: "+ session.getAttribute("username"));
 	    session.removeAttribute("username");
-	    return new ModelAndView("home");
+	    return new ModelAndView("confirmaciones/desloggeo");
 	}
 }
