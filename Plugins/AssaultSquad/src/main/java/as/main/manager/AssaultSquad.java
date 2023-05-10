@@ -9,6 +9,8 @@ import java.util.concurrent.TimeUnit;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.Objective;
 import org.bukkit.scoreboard.Score;
@@ -28,6 +30,7 @@ public class AssaultSquad {
 	private HashMap<UUID, Integer> killsPorJugador = new HashMap<>();
 	private Map<String, Location> teamSpawns;
 	private Map<String, Integer> teamKills;
+	ESTADOS state;
 	
 	
 	public AssaultSquad(Main plugin) {
@@ -41,7 +44,9 @@ public class AssaultSquad {
 		this.enPausa = false; 
 	}
 	
+
 	public void startGame() {
+		state = ESTADOS.EMPEZANDO;
 		rondas = 0;
 		this.kills = 0; 
 		this.killsTotales = 0;
@@ -49,14 +54,28 @@ public class AssaultSquad {
 	}
 	
 	public void nextRound() {
+		state = ESTADOS.ENRONDAS;
 		rondas++;
 		startRounds();
 
 	}
 	
 	public void startRounds() {
+		state = ESTADOS.ENRONDAS;
 		this.currentTime = 0;
 		this.tiempoMaximo = 300;
+		ItemStack casco = new ItemStack(Material.TURTLE_HELMET);
+        ItemStack pechera = new ItemStack(Material.IRON_CHESTPLATE);
+        ItemStack leggings = new ItemStack(Material.IRON_LEGGINGS);
+        ItemStack botas = new ItemStack(Material.IRON_BOOTS);
+        ItemStack[] armorContents = {botas, leggings, pechera, casco};
+        
+        // Dar items específicos
+        ItemStack fisico = new ItemStack(Material.DIAMOND_SWORD);
+        ItemStack duro = new ItemStack(Material.IRON_AXE);
+        ItemStack rango = new ItemStack(Material.BOW);
+        ItemStack comida = new ItemStack(Material.COOKED_BEEF, 32);
+        ItemStack flechas = new ItemStack(Material.ARROW, 64);
 		
 		for (String teamName : teamSpawns.keySet()) {
 		    Location teamSpawn = plugin.getTeamSpawn(teamName);
@@ -68,6 +87,11 @@ public class AssaultSquad {
 		            Player player = Bukkit.getPlayer(playerId);
 		            if (player != null) {
 		                player.teleport(teamSpawn);
+		                player.getInventory().clear();
+		                player.getInventory().setArmorContents(armorContents);
+		                player.getInventory().addItem(fisico, rango, comida, flechas);
+
+		                
 		            }
 		        }
 		    }
@@ -80,10 +104,10 @@ public class AssaultSquad {
 	}
 	
 	public void rounds() {
+		state = ESTADOS.ENRONDAS;
 	    Bukkit.getScheduler().scheduleSyncRepeatingTask(plugin, new Runnable() {
 	        @Override
 	        public void run() {
-	            if (!enPausa) {
 	                currentTime++;
 	                if (currentTime == tiempoMaximo) {
 	                    finishGame();
@@ -106,7 +130,7 @@ public class AssaultSquad {
 	                            }
 	                        }
 	                    }
-	                }
+	                
 	            }
 	        }
 	    }, 0L, 20L);
@@ -114,7 +138,7 @@ public class AssaultSquad {
 	}
 	
 	public void finishRound() {
-		
+		state = ESTADOS.TERMINANDORONDA;
 		HashMap<UUID, Integer> killsPorJugador = plugin.getKillsPorJugador();
 	    HashMap<String, Integer> killsPorJugadorPorEquipo = new HashMap<>();
 	    for (String teamName : plugin.getTeams().keySet()) {
@@ -128,7 +152,7 @@ public class AssaultSquad {
 	    }
 	    
 	    // Comprueba si se han jugado las tres rondas
-	    if (rondas >= 3) {
+	    if (rondas > 3) {
 	        finishGame();
 	    }else {
 	    	nextRound();
@@ -137,7 +161,7 @@ public class AssaultSquad {
 	}
 	
 	public void finishGame() {
-		
+		state = ESTADOS.OFF;
 		 // Mostrar los resultados del juego
 	    for (String teamName : teamKills.keySet()) {
 	        killsTotales = teamKills.getOrDefault(teamName, 0);
@@ -146,6 +170,9 @@ public class AssaultSquad {
 		
 	}
 	
+	public enum ESTADOS {
+		OFF,EMPEZANDO,ENRONDAS,TERMINANDORONDA;
+	}
 	
 	
 }

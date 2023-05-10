@@ -4,6 +4,7 @@ import java.awt.Event;
 import java.util.HashMap;
 import java.util.UUID;
 
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -33,29 +34,30 @@ public class AssaultListener implements Listener {
 		}
 	}
 	
-	@EventHandler
-	public void alMorir(PlayerDeathEvent pde) {
-
-	}
 
 	@EventHandler
 	public void alRespawnear(PlayerRespawnEvent pre) {
-
+		Player jugador = pre.getPlayer();
+		String teamName = plugin.getTeamByPlayer(jugador);
+		Location loc = plugin.getTeamSpawn(teamName);
+		jugador.teleport(loc);
+		
 	}
 	
 	@EventHandler
 	public void romperBloques(BlockBreakEvent bbe) {
-
+		bbe.setCancelled(true);
 	}
 
 	@EventHandler
 	public void colocarBloques(BlockPlaceEvent bpe) {
-
+		bpe.setCancelled(true);
 	}
 
 	@EventHandler
 	public void droppearItems(PlayerDropItemEvent pdie) {
-
+		pdie.setCancelled(true);
+		
 	}
 
 }
