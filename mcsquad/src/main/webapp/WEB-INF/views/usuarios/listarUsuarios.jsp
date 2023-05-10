@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<% System.out.println("ListarUsuarios JSP encontrado"); %>
+<%
+System.out.println("ListarUsuarios JSP encontrado");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,18 +22,21 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-<body>
+<body id="bodyindex">
 	<!--            Navbar          -->
 	<nav>
 		<%@include file="../fijos/navbar.jsp"%>
 	</nav>
-
+	<br>
+	<br>
 	<div class="container">
 		<h1 class="mt-4">Lista de usuarios</h1>
 		<div class="btn-group mb-3" role="group" aria-label="Filtros">
 			<a href="../usuarios/listarUsuarios" class="btn btn-light">Todos</a>
-			<a href="../usuarios/listarUsuarios?filtro=clientes" class="btn btn-light">Cliente</a>
-			<a href="../usuarios/listarUsuarios?filtro=administrativos" class="btn btn-light">Administrativos</a>
+			<a href="../usuarios/listarUsuarios?filtro=clientes"
+				class="btn btn-light">Cliente</a> <a
+				href="../usuarios/listarUsuarios?filtro=administrativos"
+				class="btn btn-light">Administrativos</a>
 		</div>
 		<div class="table-responsive">
 			<table class="table table-striped table-hover">
@@ -139,8 +144,8 @@
 		<%@include file="../fijos/footer.jsp"%>
 	</footer>
 
-<script src="../resources/main.js"></script>
- <!-- Enlace al archivo JavaScript de jQuery -->
+	<script src="../resources/main.js"></script>
+	<!-- Enlace al archivo JavaScript de jQuery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 
 	<!-- Enlace al archivo JavaScript de Bootstrap -->

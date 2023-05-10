@@ -20,9 +20,9 @@
 <!--   Iconos de footer -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<title>Insert title here</title>
+<title>Confirmacion</title>
 </head>
-<body>
+<body id="bodyindex">
 
 	<!-- navbar -->
 
@@ -49,9 +49,9 @@
 	</div>
 
 	<!-- footer  -->
-
-	<%@include file="../fijos/footer.jsp"%>
-
+	<footer class="bottom">
+		<%@include file="../fijos/footer.jsp"%>
+	</footer>
 	<script src="../resources/main.js"></script>
 	<!-- Enlace al archivo JavaScript de jQuery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

@@ -51,19 +51,16 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter{
 	}
 	
 	@Bean 
-	
 	public CRUD<Administrativo> getAdminDao(){
 		return new ImplAdminDao(getConnection());
 	}
 	
 	@Bean
-	
 	public CRUD<Cliente> getClienteDao(){
 		return new ImplClienteDao(getConnection());
 	}
 	
 	@Bean
-	
 	public CRUD<Usuario> getUsuarioDao(){
 		return new ImplUsuarioDao(getConnection());
 	}

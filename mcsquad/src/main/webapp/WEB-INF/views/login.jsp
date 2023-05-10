@@ -27,9 +27,9 @@
 
 <!---- Formulario Login -->
 
-<section class="container" id="login" >
+<section class="container mt-4" id="login" >
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-6">
         <form action="login" method="POST">
           <div class="form-group">
             <label for="nombre">Username:</label>
@@ -42,7 +42,8 @@
           <button type="submit" class="btn btn-success btn-block">Iniciar sesión</button>
         </form>
       </div>
-      <div class="col-md-6">
+      <div class="col-1"></div>
+      <div class="col">
         <img src="resources/imagenes/sinfondo6.jpeg" alt="Imagen de ejemplo" class="img-fluid">
       </div>
     </div>

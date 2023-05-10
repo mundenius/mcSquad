@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <title>Editar Usuario</title>
 </head>
-<body>
+<body id="bodyindex">
 
 <!--            Navbar          -->
   <nav>
@@ -22,13 +22,13 @@
   </nav>
   
   <!-- Cuerpo de la Pagina  -->
-
+<br><br>
 <div class="container">
 	<h2>Editar Usuarios</h2>
 	<form action="editarUsuario" method="POST"> 
 		<div class="mb-3">
 			<label for="tipo_usuario" class="form-label">Tipo de usuario:</label>
-			<select id="tipo_usuario" class="form-select" onchange="mostrarCampos()" name="tipo_usuario">
+			<select id="tipo_usuario" class="form-select" onchange="mostrarCampos()" name="tipo_usuario" required>
 				<option value="">Seleccione una opción</option>
 				<option value="cliente">Cliente</option>
 				<option value="administrativo">Administrativo</option>
@@ -39,7 +39,7 @@
 		<div class="mb-3">
 		<div class="mb-3">
 			<label for="run" class="form-label">Ingrese RUN del Usuario a modificar:</label>
-			<input type="text" class="form-control" id="run" name="run" placeholder="12345678-K" pattern="^[0-9]+-[0-9kK]{1}$">
+			<input type="text" class="form-control" id="run" name="run" placeholder="12345678-K" pattern="^[0-9]+-[0-9kK]{1}$" required>
 		</div>
 			<label for="username" class="form-label">Username:</label>
 			<input type="text" class="form-control" id="username" name="username">
@@ -58,7 +58,7 @@
 		</div>
 		<div class="mb-3">
 			<label for="clave" class="form-label">Contraseña:</label>
-			<input type="password" class="form-control" id="clave" name="clave">
+			<input type="password" class="form-control" id="clave" name="clave" required title="Introduzca su contraseñea para validar los cambios">
 		</div>
 
 		<div id="campos_cliente" style="display: none;">
@@ -83,7 +83,8 @@
 		<button type="submit" class="btn btn-success btn-block">Registrarse</button>
 	</form>
 </div>
-
+<br>
+<br>
   <!------------------ Footer ----------------->
 
   <footer>
