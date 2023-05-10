@@ -1,3 +1,4 @@
+/**@author mundenius */
 package cl.mundenius.mcsquad.controller;
 
 import java.io.IOException;
@@ -11,6 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+
+/**@category	Controller
+ * @param	ConfirmacionController
+ * Mappeo a jsps correspondientes
+ *  */
 @Controller
 @RequestMapping(value="/confirmaciones")
 public class ConfirmacionController {

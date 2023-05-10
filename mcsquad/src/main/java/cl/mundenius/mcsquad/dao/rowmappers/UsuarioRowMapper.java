@@ -1,3 +1,5 @@
+/**@author mundenius */
+
 package cl.mundenius.mcsquad.dao.rowmappers;
 
 import java.sql.ResultSet;
@@ -9,6 +11,9 @@ import cl.mundenius.mcsquad.modelo.Usuario;
 
 public class UsuarioRowMapper implements RowMapper<Usuario>{
 
+	/**@category RowMapper
+	 * @param Usuario
+	 * Rowmapper para traer los datos de la base de datos de forma ordenada*/
 	@Override
 	public Usuario mapRow(ResultSet rs, int colNr) throws SQLException{
 		Usuario user = new Usuario();

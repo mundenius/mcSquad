@@ -1,3 +1,5 @@
+/**@author mundenius */
+
 package cl.mundenius.mcsquad.dao;
 
 import java.util.List;
@@ -15,7 +17,8 @@ import cl.mundenius.mcsquad.dao.rowmappers.UsuarioRowMapper;
 import cl.mundenius.mcsquad.dao.rowmappers.AdminRowMapper;
 import cl.mundenius.mcsquad.dao.rowmappers.ClienteRowMapper;
 
-
+/**@category	Implementacion DAO
+ * @param	Usuario */
 public class ImplUsuarioDao implements CRUD<Usuario>{
 
 	private JdbcTemplate jdbcTemp;

@@ -1,3 +1,5 @@
+/**@author mundenius */
+
 package cl.mundenius.mcsquad.dao;
 
 import java.util.List;
@@ -13,6 +15,9 @@ import cl.mundenius.mcsquad.interfaces.CRUD;
 import cl.mundenius.mcsquad.modelo.Administrativo;
 import cl.mundenius.mcsquad.modelo.Usuario;
 
+
+/**@category	Implementacion DAO
+ * @param	Administrativo */
 @Repository
 public class ImplAdminDao implements CRUD<Administrativo>{
 

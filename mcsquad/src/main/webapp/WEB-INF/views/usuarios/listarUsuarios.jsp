@@ -138,6 +138,7 @@ System.out.println("ListarUsuarios JSP encontrado");
 			</table>
 		</div>
 	</div>
+	<br><br>
 	<!------------------ Footer ----------------->
 
 	<footer>

@@ -1,5 +1,6 @@
 /**
- * 
+ * Funcion para mostrar los campos correspondientes al tipo de usuario.
+ * Usuado en formulario de crearUsuario y editarUsuario
  */
 
  function mostrarCampos() {

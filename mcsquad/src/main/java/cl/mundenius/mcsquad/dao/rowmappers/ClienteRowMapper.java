@@ -1,3 +1,5 @@
+/**@author mundenius */
+
 package cl.mundenius.mcsquad.dao.rowmappers;
 
 import java.sql.ResultSet;
@@ -9,6 +11,10 @@ import cl.mundenius.mcsquad.modelo.Cliente;
 
 public class ClienteRowMapper implements RowMapper<Cliente>{
 
+	/**@category RowMapper
+	 * @param	Cliente
+	 * Rowmapper para traer los datos de la base de datos de forma ordenada
+	 *  */
 	@Override
 	public Cliente mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Cliente cli = new Cliente();

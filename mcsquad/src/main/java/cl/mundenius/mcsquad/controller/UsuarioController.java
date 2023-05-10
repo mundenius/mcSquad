@@ -62,7 +62,6 @@ public class UsuarioController {
 	                                     @RequestParam(value = "area", required = false) String area) {
 	    ModelAndView mv = new ModelAndView();
 
-	    // Verificar el valor del campo "tipo_usuario"
 	    if (tipoUsuario.equals("cliente")) {
 	        // Invocar al método para guardar los datos en la tabla de clientes
 	        Cliente cli = new Cliente();
@@ -156,7 +155,6 @@ public class UsuarioController {
 	                                     @RequestParam(value = "area", required = false) String area) {
 	    ModelAndView mv = new ModelAndView();
 
-	    // Verificar el valor del campo "tipo_usuario"
 	    if (tipoUsuario.equals("cliente")) {
 	        // Invocar al método para guardar los datos en la tabla de clientes
 	        Cliente cli = new Cliente();

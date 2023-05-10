@@ -1,3 +1,4 @@
+/**@author mundenius */
 package cl.mundenius.mcsquad.controller;
 
 import java.io.IOException;
@@ -17,6 +18,11 @@ import org.springframework.web.servlet.ModelAndView;
 import cl.mundenius.mcsquad.interfaces.CRUD;
 import cl.mundenius.mcsquad.modelo.Usuario;
 
+
+/**@category	Controller
+ * @param	LoginController
+ * Mappeo a jsp correspondiente
+ *  */
 @Controller
 public class LoginController {
 
