@@ -22,7 +22,10 @@ En este proyecto en particular se propone un sitio web, en el cual se tendra acc
 ### Desarrollo
 
 <p style="text-align: justify;">
-
+Para la creacion del proyecto web se implemento SPRING MVC, a partir de un proyecto Maven. La version de Java es la 1.8, y se uso Tomcat 9.071 para levantar el proyecto. 
+</p>
+<p style="text-align: justify;">
+Minecraft es un juego que esta codificado en Java, por ende conocer el lenguaje Java es indispensable para hacerle modificaciones y agregarle funcionalidades. Para el desarrollo de los plugins creados se utilizo el software Spigot 1.19.2, que consume una API llamada Bukkit, la cual contiene las librerias, metodos, etc del codigo base del juego. Estas librerias, metodos accesores y mutadores, interfaces y funciones, son las que uno debe uitlizar al crear un Plugin para Minecraft. Se alcanzó a desarrollar dos plugins en su totalidad, y hay uno que esta en proceso de construcción, con aproximadamente un 45% de la logica lista.   
 </p>
 
 
