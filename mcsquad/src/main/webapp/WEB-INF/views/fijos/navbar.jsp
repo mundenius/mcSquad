@@ -32,6 +32,7 @@
             <b>Usuarios</b> 
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a href="<c:url value='/usuarios/crearUsuario'/>" class="dropdown-item" >Crear Usuario</a></li>
             <li><a href="<c:url value='/usuarios/listarUsuarios'/>" class="dropdown-item" >Lista de Usuarios</a></li>
             <li><a href="<c:url value='/usuarios/editarUsuario'/>" class="dropdown-item" >Editar Usuario</a></li>
             <li><a href="<c:url value='/usuarios/eliminarUsuario'/>" class="dropdown-item">Eliminar Usuario</a></li>
@@ -48,7 +49,7 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="userDropdown">
               <li>
-                <form action="logout" method="POST">
+                <form action="<c:url value='/logout' />" method="POST">
                   <button id="btnlogout" class="btn btn-sm">Logout</button>
 				</form>
                 <ul>

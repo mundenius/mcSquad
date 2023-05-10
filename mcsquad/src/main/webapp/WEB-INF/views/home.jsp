@@ -25,7 +25,7 @@
 	<!--    Cuerpo de la paginaa   -->
 
 	<div class="card text-white" id="boycard1">
-		<img class="card-img" src="resources/imagenes/minecraft5.png"
+		<img class="card-img" src="resources/imagenes/logomcsquad.png"
 			alt="Card image"
 			style="max-width: 70%; max-height: 70%; margin: auto;">
 		<div class="card-img-overlay"></div>
@@ -164,6 +164,15 @@
 	</footer>
 
 
+<script src="../resources/main.js"></script>
+ <!-- Enlace al archivo JavaScript de jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+	<!-- Enlace al archivo JavaScript de Bootstrap -->
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
 		integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"

@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="refresh" content="5;url=<c:url value='/usuarios/listarUsuario'/>">
  <!--   etiquetas de Bootstrap  -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -12,46 +13,37 @@
 
   <!--   Iconos de footer -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<title>Eliminar Usuario</title>
+<title>Insert title here</title>
 </head>
 <body>
-<!--            Navbar          -->
-  <nav>
-  <%@include file="../fijos/navbar.jsp"%>
-  </nav>
-  
-    <!-- Cuerpo de la Pagina  -->
-  
-<div class="container">
-	<h2>Editar Usuario</h2>
-	<form action="eliminarUsuario" method="POST"> 
-		<div class="mb-3">
-			<label for="tipo_usuario" class="form-label">Tipo de usuario:</label>
-			<select id="tipo_usuario" class="form-select" onchange="mostrarCampos()" name="tipo_usuario">
-				<option value="">Seleccione una opción</option>
-				<option value="cliente">Cliente</option>
-				<option value="administrativo">Administrativo</option>
-			</select>
-		</div>
 
-		<!-- Campos fijos para todos los usuarios -->
-		<div class="mb-3">
-			<label for="run" class="form-label">RUN de Usuario a eliminar:</label>
-			<input type="text" class="form-control" id="run" name="run" placeholder="12345678-K" pattern="^[0-9]+-[0-9kK]{1}$">
-		</div>
-				<div class="mb-3">
-			<label for="clave" class="form-label">Contraseña:</label>
-			<input type="password" class="form-control" id="clave" name="clave">
-		</div>
-		<button type="submit" class="btn btn-danger btn-block">Eliminar Usuario</button>
-	</form>
-</div>
-  <!------------------ Footer ----------------->
+	<!-- navbar -->
 
-  <footer>
-  <%@include file="../fijos/footer.jsp" %>
-  </footer>
-  
+	<%@include file="../fijos/navbar.jsp"%>
+
+	<div class="container">
+		<div class="row mt-5">
+			<div class="col-md-6 offset-md-3">
+				<div class="card">
+					<div class="card-body">
+						<h1 class="card-title text-center mb-4">¡Usuario eliminado con
+							éxito!</h1>
+						<p class="card-text text-center">El usuario ha sido eliminado
+							correctamente en nuestra base de datos. Redireccionando a lista
+							de usuarios</p>
+						<div class="text-center mt-4">
+							<a href="<c:url value='/'/>" class="btn btn-primary">Volver a inicio</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer  -->
+
+	<%@include file="../fijos/footer.jsp"%>
+
 <script src="../resources/main.js"></script>
  <!-- Enlace al archivo JavaScript de jQuery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -69,5 +61,7 @@
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
 		integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
 		crossorigin="anonymous"></script>
+
+	
 </body>
 </html>

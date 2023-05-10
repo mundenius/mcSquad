@@ -30,8 +30,8 @@ public class ImplAdminDao implements CRUD<Administrativo>{
 	final String GETALL 		= "SELECT u.idusuario, u.username, u.nombre, u.apellido, u.fechaNacimiento, u.clave, u.run, a.idadministrativo, a.area "
 								+ "FROM usuario u "
 								+ "INNER JOIN administrativo a "
-								+ "ON u.run = a.rutadmin"
-								+ "ORDER BY a.idadmin;";
+								+ "ON u.run = a.rutadmin "
+								+ "ORDER BY u.idusuario;";
 	final String INSERT_USUARIO = "INSERT INTO usuario(username, nombre, apellido, fechanacimiento, clave, run) VALUES (?,?,?,?,?,?);";
 	final String INSERT_ADMIN 	= "INSERT INTO administrativo(area, rutadmin) VALUES (?,?);";
 	final String UPDATE_USUARIO = "UPDATE usuario SET username = ?, nombre = ?, apellido = ?, fechanacimiento = ?, clave = ? WHERE run = ?;";
