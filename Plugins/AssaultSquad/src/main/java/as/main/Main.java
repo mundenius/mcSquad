@@ -111,6 +111,16 @@ public class Main extends JavaPlugin{
 		return teams.get(teamName);
 	}
 	
+	public String getTeamByPlayer(Player player) {
+	    UUID playerId = player.getUniqueId();
+	    for (String teamName : teams.keySet()) {
+	        if (teams.get(teamName).contains(playerId)) {
+	            return teamName;
+	        }
+	    }
+	    return null; // El jugador no está en ningún equipo
+	}
+	
 	public HashMap<UUID, Integer> getKillsPorJugador() {
 		return killsPorJugador;
 	}

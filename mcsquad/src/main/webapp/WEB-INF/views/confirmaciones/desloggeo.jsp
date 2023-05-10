@@ -6,8 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="5;url=<c:url value='/'/>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="5; url=<c:url value='/'/>">
 
 <!--   etiquetas de Bootstrap  -->
 <link
@@ -15,7 +14,8 @@
 	rel="stylesheet"
 	integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
 	crossorigin="anonymous">
-<link rel="stylesheet" href="/resources/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../resources/style.css">
 
 <!--   Iconos de footer -->
 <link rel="stylesheet"
@@ -52,7 +52,7 @@
 		<%@include file="../fijos/footer.jsp"%>
 	</footer>
 
-	<script src="/resources/main.js"></script>
+	<script src="../resources/main.js"></script>
 	<!-- Enlace al archivo JavaScript de jQuery -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 

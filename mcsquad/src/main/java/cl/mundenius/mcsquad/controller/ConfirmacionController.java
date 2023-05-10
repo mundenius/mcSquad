@@ -33,7 +33,7 @@ public class ConfirmacionController {
 		return new ModelAndView("confirmaciones/usuarioEliminado");
 	}
 	
-	@RequestMapping(value="/logout", method = RequestMethod.POST)
+	@RequestMapping(value="/logout", method = RequestMethod.GET)
 	public ModelAndView logout(HttpServletRequest request, HttpServletResponse response) throws IOException{
 	    return new ModelAndView("confirmaciones/desloggeo");
 	}
