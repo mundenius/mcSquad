@@ -14,6 +14,9 @@ import cl.mundenius.mcsquad.interfaces.CRUD;
 import cl.mundenius.mcsquad.modelo.Cliente;
 import cl.mundenius.mcsquad.modelo.Usuario;
 
+
+/**@category	Implementacion DAO
+ * @param	Cliente */
 @Repository
 public class ImplClienteDao implements CRUD<Cliente> {
 

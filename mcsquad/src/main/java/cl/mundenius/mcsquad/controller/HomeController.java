@@ -1,3 +1,4 @@
+/**@author mundenius */
 package cl.mundenius.mcsquad.controller;
 
 import java.io.IOException;
@@ -9,6 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+
+/**@category	Controller
+ * @param	HomeController
+ * Mappeo a jsp correspondiente
+ *  */
 @Controller
 public class HomeController {
 

@@ -1,5 +1,10 @@
+/**@author mundenius */
 package cl.mundenius.mcsquad.modelo;
 
+
+/**@category	Clase
+ * @param	Cliente
+ * Clase Cliente, contiene todos los atributos que se necesitan recibir en la base de datos */
 public class Cliente extends Usuario{
 
 	private int idCliente;

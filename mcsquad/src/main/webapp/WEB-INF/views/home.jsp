@@ -81,8 +81,8 @@
     </div>
 
     <div class="card">
+        <div class="card-body p-0">
         <img src="resources/imagenes/logomcsquad.png" class="card-img-top" alt="..." style="width:100%; height:100%">
-        <div class="card-body">
         </div>
     </div>
 

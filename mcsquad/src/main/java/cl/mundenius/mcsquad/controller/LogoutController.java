@@ -1,3 +1,4 @@
+/**@author mundenius */
 package cl.mundenius.mcsquad.controller;
 
 import java.io.IOException;
@@ -16,6 +17,10 @@ import cl.mundenius.mcsquad.interfaces.CRUD;
 import cl.mundenius.mcsquad.modelo.Usuario;
 
 
+/**@category	Controller
+ * @param	LogoutController
+ * Mappeo a jsp correspondiente
+ *  */
 @Controller
 public class LogoutController {
 

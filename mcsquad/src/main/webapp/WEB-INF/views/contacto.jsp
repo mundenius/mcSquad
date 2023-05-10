@@ -53,7 +53,7 @@
 						<textarea class="form-control" id="message" rows="5"
 							placeholder="Ingrese su mensaje"></textarea>
 					</div>
-					<button type="submit" class="btn btn-primary">Enviar</button>
+					<button type="submit" class="btn btn-success">Enviar</button>
 				</form>
 			</div>
 			<div class="col-lg-6">
@@ -65,7 +65,7 @@
 
 	<!------------------ Footer ----------------->
 
-	<footer class="fixed-bottom">
+	<footer class="bottom">
 		<%@include file="fijos/footer.jsp"%>
 	</footer>
 

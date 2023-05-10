@@ -1,3 +1,5 @@
+/**@author mundenius */
+
 package cl.mundenius.mcsquad.dao.rowmappers;
 
 import java.sql.ResultSet;
@@ -9,6 +11,10 @@ import cl.mundenius.mcsquad.modelo.Administrativo;
 
 public class AdminRowMapper implements RowMapper<Administrativo>{
 
+	/**@category RowMapper
+	 * @param Administrativo
+	 * Rowmapper para traer los datos de la base de datos de forma ordenada
+	 *  */
 	@Override
 	public Administrativo mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Administrativo admin = new Administrativo();

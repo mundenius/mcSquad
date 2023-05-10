@@ -87,7 +87,7 @@
 								quien hace mas kills!</p>
 						</div>
 						<div class="card-footer">
-							<a class="btn btn-secondary" href="#" download>Pronto..</a>
+							<a class="btn btn-secondary" href="#" download disabled>Pronto..</a>
 						</div>
 					</div>
 				</div>

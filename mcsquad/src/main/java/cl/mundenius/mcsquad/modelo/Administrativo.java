@@ -1,5 +1,9 @@
+/**@author mundenius */
 package cl.mundenius.mcsquad.modelo;
 
+/**@category	Clase
+ * @param	Administrativo
+ * Clase Administrativo, contiene todos los atributos que se necesitan recibir en la base de datos */
 public class Administrativo extends Usuario{
 
 	private int idAdmin;
