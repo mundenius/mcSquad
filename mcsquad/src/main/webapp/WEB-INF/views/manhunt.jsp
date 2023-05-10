@@ -34,31 +34,47 @@
 					distinto. También esta incluido el comanod "/cleanstart", que te
 					permitirá partir desde cero, pero asegurandose de que se le
 					restituyan las brujulas a los cazadores.</p>
+				<div id="carouselExampleControls" class="carousel slide"
+					data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img class="d-block w-100"
+								src="resources/imagenes/manhunt/Captura de pantalla 2023-05-08 163447.png"
+								alt="First slide">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100"
+								src="resources/imagenes/manhunt/Captura de pantalla 2023-05-08 163447.png"
+								alt="Second slide">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100"
+								src="resources/imagenes/manhunt/Captura de pantalla 2023-05-08 170535.png"
+								alt="Third slide">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100"
+								src="resources/imagenes/manhunt/Captura de pantalla 2023-05-08 171009.png"
+								alt="Fourth slide">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100"
+								src="resources/imagenes/manhunt/Captura de pantalla 2023-05-08 171214.png"
+								alt="Fifth slide">
+						</div>
+					</div>
+					<a class="carousel-control-prev" href="#carouselExampleControls"
+						role="button" data-slide="prev"> <span
+						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+						class="sr-only">Anterior</span>
+					</a> <a class="carousel-control-next" href="#carouselExampleControls"
+						role="button" data-slide="next"> <span
+						class="carousel-control-next-icon" aria-hidden="true"></span> <span
+						class="sr-only">Siguiente</span>
+					</a>
+				</div>
 				<div class="card-group">
 					<div class="card">
-						<div id="carouselExampleControls" class="carousel slide"
-							data-ride="carousel">
-							<div class="carousel-inner">
-								<div class="carousel-item active">
-									<img class="d-block w-100" src="..." alt="First slide">
-								</div>
-								<div class="carousel-item">
-									<img class="d-block w-100" src="..." alt="Second slide">
-								</div>
-								<div class="carousel-item">
-									<img class="d-block w-100" src="..." alt="Third slide">
-								</div>
-							</div>
-							<a class="carousel-control-prev" href="#carouselExampleControls"
-								role="button" data-slide="prev"> <span
-								class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-								class="sr-only">Anterior</span>
-							</a> <a class="carousel-control-next" href="#carouselExampleControls"
-								role="button" data-slide="next"> <span
-								class="carousel-control-next-icon" aria-hidden="true"></span> <span
-								class="sr-only">Siguiente</span>
-							</a>
-						</div>
 						<div class="card-body" id="cartas">
 							<h3 class="card-title display-4">MANHUNT</h3>
 							<p class="card-text lead">Caza a tus amigos, mientras
@@ -78,6 +94,15 @@
 		<%@include file="fijos/footer.jsp"%>
 	</footer>
 
+
+	<!-- Enlace al archivo JavaScript de jQuery -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+	<!-- Enlace al archivo JavaScript de Bootstrap -->
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script
 		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
 		integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"

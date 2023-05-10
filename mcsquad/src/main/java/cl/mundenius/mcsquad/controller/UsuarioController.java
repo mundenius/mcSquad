@@ -90,7 +90,7 @@ public class UsuarioController {
 	        adminDao.crearUsuario(admin);
 	    }
 
-	    mv.setViewName("redirect:listarUsuarios");
+	    mv.setViewName("redirect:/confirmaciones/crearUsuario");
 	    return mv;
 	}
 	
@@ -184,7 +184,7 @@ public class UsuarioController {
 	        adminDao.editarUsuario(admin);
 	    }
 
-	    mv.setViewName("redirect:listarUsuarios");
+	    mv.setViewName("redirect:/confirmaciones/editarUsuario");
 	    return mv;
 	}
 	
@@ -222,7 +222,7 @@ public class UsuarioController {
 	            adminDao.eliminarUsuario(admin);
 	        }
 
-	        mv.setViewName("redirect:listarUsuarios");
+	        mv.setViewName("redirect:/confirmaciones/eliminarUsuario");
 	        return mv;
 	    } catch (Exception e) {
 	        // Configuracion  del mensaje de error
@@ -230,7 +230,7 @@ public class UsuarioController {
 	        
 	        // Se agrega el mensaje de error como objeto al MAV
 	        mv.addObject("error", errorMessage);
-	        mv.setViewName("redirect:listarUsuarios");
+	        mv.setViewName("redirect:/usuarios/eliminarUsuario");
 	        return mv;
 	    }
 	}
