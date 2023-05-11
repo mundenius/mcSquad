@@ -66,8 +66,8 @@ El CRUD per sé, no utilizaba muchas sentencias repetitivas, ni algoritmos espec
 </p>
 
 Estas se pueden encontrar en los siguientes directorios del proyecto MCSQUAD:
-- mcsquad.src.main.java.*;
-- mcsquad.src.test.java.*;
+ - mcsquad.src.main.java.*;
+ - mcsquad.src.test.java.*;
 
 
 
@@ -77,7 +77,7 @@ Todas las paginas web fueron maqueteadas con BootsTrap5; la paleta de colores y 
 </p>
 
 Estos archivos podran ser encontrados en este path del proyecto MCSQUAD: 
-- webapp.WEB-INF.views.*;
+ - webapp.WEB-INF.views.*;
 
 
 <h3> Spring MVC </h3>
@@ -94,4 +94,5 @@ En general, todo lo relacionado al proyecto podra ser encontrado en estos direct
 - java.cl.mundenius.mcsquad.dao.*;
 - java.cl.mundenius.mcsquad.modelo.*;
 - webapp.WEB-INF.views.*;
+
 
