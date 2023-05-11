@@ -45,7 +45,7 @@ Existen distintos tipos de sentencias las cuales se usan para que el CRUD sea ex
 Se podran encontrar en este path: </p>
 
 - java.cl.mundenius.mcsquad.dao.*;
-Clases:
+- Clases:
 - ImplAdminDao: lineas 34-48
 - ImplClienteDao: lineas 32 -46
 - ImplUsuarioDao: lineas 30-41
