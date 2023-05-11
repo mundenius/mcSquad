@@ -46,9 +46,9 @@ Se podran encontrar en este path: </p>
 
 - java.cl.mundenius.mcsquad.dao.*;
 - Clases:
-- ImplAdminDao: lineas 34-48
-- ImplClienteDao: lineas 32 -46
-- ImplUsuarioDao: lineas 30-41
+1. ImplAdminDao: lineas 34-48
+2. ImplClienteDao: lineas 32 -46
+3. ImplUsuarioDao: lineas 30-41
 
 
 <h3> Algoritmos y Unidades de Prueba </h3>
