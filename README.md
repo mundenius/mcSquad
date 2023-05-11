@@ -45,10 +45,10 @@ Existen distintos tipos de sentencias las cuales se usan para que el CRUD sea ex
 Se podran encontrar en este path: </p>
 
 - java.cl.mundenius.mcsquad.dao.*;
-Clases:
-- ImplAdminDao: lineas 34-48
-- ImplClienteDao: lineas 32 -46
-- ImplUsuarioDao: lineas 30-41
+- Clases:
+1. ImplAdminDao: lineas 34-48
+2. ImplClienteDao: lineas 32 -46
+3. ImplUsuarioDao: lineas 30-41
 
 
 <h3> Algoritmos y Unidades de Prueba </h3>
@@ -66,8 +66,8 @@ El CRUD per sé, no utilizaba muchas sentencias repetitivas, ni algoritmos espec
 </p>
 
 Estas se pueden encontrar en los siguientes directorios del proyecto MCSQUAD:
-- mcsquad.src.main.java.*;
-- mcsquad.src.test.java.*;
+ - mcsquad.src.main.java.*;
+ - mcsquad.src.test.java.*;
 
 
 
@@ -77,7 +77,7 @@ Todas las paginas web fueron maqueteadas con BootsTrap5; la paleta de colores y 
 </p>
 
 Estos archivos podran ser encontrados en este path del proyecto MCSQUAD: 
-- webapp.WEB-INF.views.*;
+ - webapp.WEB-INF.views.*;
 
 
 <h3> Spring MVC </h3>
@@ -94,4 +94,5 @@ En general, todo lo relacionado al proyecto podra ser encontrado en estos direct
 - java.cl.mundenius.mcsquad.dao.*;
 - java.cl.mundenius.mcsquad.modelo.*;
 - webapp.WEB-INF.views.*;
+
 
