@@ -36,7 +36,7 @@ Minecraft es un juego que esta codificado en Java, por ende conocer el lenguaje 
 - [x] Base de Datos
 - [x] CRUD
 
-##### Respecto a la rubrica Talento Digital
+### Respecto a la rubrica Talento Digital
 
 <h3> Base de Datos </h3>
 <p style="text-align: justify;"> 
