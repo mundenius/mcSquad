@@ -47,7 +47,7 @@
 			</div>
 		</div>
 	</div>
-
+<br><br>
 	<!-- footer  -->
 	<footer class="bottom">
 		<%@include file="../fijos/footer.jsp"%>

@@ -33,7 +33,8 @@ public class ImplClienteDao implements CRUD<Cliente> {
 	final String GETALL 		= "SELECT u.idusuario, u.username, u.nombre, u.apellido, u.fechaNacimiento, u.clave, u.run, c.idcliente, c.telefono, c.email "
 								+ "FROM usuario u "
 								+ "INNER JOIN cliente c "
-								+ "ON u.run = c.rutcliente";
+								+ "ON u.run = c.rutcliente "
+								+ "ORDER BY u.idusuario;";
 	final String INSERT_USUARIO = "INSERT INTO usuario(username, nombre, apellido, fechanacimiento, clave, run) VALUES (?,?,?,?,?,?);";
 	final String INSERT_CLIENTE = "INSERT INTO cliente(telefono, email, rutcliente) VALUES (?,?,?);";
 	final String UPDATE_USUARIO = "UPDATE usuario SET username = ?, nombre = ?, apellido = ?, fechanacimiento = ?, clave = ? WHERE run = ?;";
