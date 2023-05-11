@@ -41,14 +41,14 @@ Minecraft es un juego que esta codificado en Java, por ende conocer el lenguaje 
 <h3> Base de Datos </h3>
 <p style="text-align: justify;"> 
 Se utilizo el patron de de conexion DAO. Por ende en las clases respectivas a ImplXxxxDao, se podran encontrar las sentencias de mySQL. 
-Existen distintos tipos de sentencias las cuales se usan para que el CRUD sea existoso. Estas sentencias son de INSERT, UPDATE, SELECT y DELETE. Tambien se utilizaron otras sentencias como WHERE y ORDER BY para filtar y ordenar los datos.
+Existen distintos tipos de sentencias las cuales se usan para que el CRUD sea existoso. Estas sentencias son de INSERT, UPDATE, SELECT y DELETE. Tambien se utilizaron otras sentencias como WHERE y ORDER BY para filtar y ordenar los datos.</p>
 Se podran encontrar en este path: 
 - java.cl.mundenius.mcsquad.dao.*;
 Clases:
 	- ImplAdminDao: lineas 34-48
 	- ImplClienteDao: lineas 32 -46
 	- ImplUsuarioDao: lineas 30-41
-</p>
+
 
 <h3> Algoritmos y Unidades de Prueba </h3>
 <p style="text-align: justify;"> 
