@@ -43,7 +43,7 @@ Minecraft es un juego que esta codificado en Java, por ende conocer el lenguaje 
 Se utilizo el patron de de conexion DAO. Por ende en las clases respectivas a ImplXxxxDao, se podran encontrar las sentencias de mySQL. 
 Existen distintos tipos de sentencias las cuales se usan para que el CRUD sea existoso. Estas sentencias son de INSERT, UPDATE, SELECT y DELETE. Tambien se utilizaron otras sentencias como WHERE y ORDER BY para filtar y ordenar los datos.
 Se podran encontrar en este path: 
--> java.cl.mundenius.mcsquad.dao.*;
+- java.cl.mundenius.mcsquad.dao.*;
 Clases:
 	- ImplAdminDao: lineas 34-48
 	- ImplClienteDao: lineas 32 -46
@@ -53,30 +53,30 @@ Clases:
 <h3> Algoritmos y Unidades de Prueba </h3>
 <p style="text-align: justify;"> 
 El grueso de los algoritmos de mis codigos, se encuentra en los plugins. Los plugins fueron codificados en su totalidad en lenguaje Java, y al tener funcionalidades tan especiales, era necesario hacer uso de sentencias repetitivas como for loops, y crear formulas de calculos especificos para determinar ciertos comportamientos de los objetos dentro del juego.
-Al utilizar el software Spigot para alojar y crear el servidor en donde corren los plugins, es necesario utilizar herencia, polimorfismo e interfaces, además de entender como funcionan las relaciones entre los objetos para de esta forma crear nuevas funcionalidades con las ya existentes. 
-Se podran encontrar estas en estos directorios de los proyectos ManHunt, TeleportHubs y AssaultSquad:
--> Manhunt.src.main.java.main.comandos.*;
--> TeleportHubs.src.main.java.main.comandos.*;
--> AssaultSquad.src.main.java.main.comandos.*;
-</p>
+Al utilizar el software Spigot para alojar y crear el servidor en donde corren los plugins, es necesario utilizar herencia, polimorfismo e interfaces, además de entender como funcionan las relaciones entre los objetos para de esta forma crear nuevas funcionalidades con las ya existentes. </p>
+Se podran encontrar estas en estos directorios de los proyectos ManHunt, TeleportHubs y AssaultSquad: 
+- Manhunt.src.main.java.main.comandos.*;
+- TeleportHubs.src.main.java.main.comandos.*;
+- AssaultSquad.src.main.java.main.comandos.*;
+
 <p style="text-align: justify;"> 
 El CRUD per sé, no utilizaba muchas sentencias repetitivas, ni algoritmos especificos, sino que vienen de parte de un patrón de diseño. Parte de este patrón de diseño inlcuye utilizar interfaces y polimorfismo. Mi modelo en particular se basa en la herencia de datos, desde una clase padre Usuario, a dos clases hijas Administrativo y Cliente. A esta clase padre se le hicieron pruebas unitarias, respecto a los getters, setters y su constructor. 
 </p>
-<p style="text-align: justify;"> 
+
 Estas se pueden encontrar en los siguientes directorios del proyecto MCSQUAD:
--> mcsquad.src.main.java.*;
--> mcsquad.src.test.java.*;
-</p>
+- mcsquad.src.main.java.*;
+- mcsquad.src.test.java.*;
+
 
 
 <h3> Pagina Web </h3>
 <p style="text-align: justify;"> 
 Todas las paginas web fueron maqueteadas con BootsTrap5; la paleta de colores y pequeños ajustes de formato se pueden encontrar en el archivo CSS. Se utlizo taglib en los archivos JSP.
+</p>
 
 Estos archivos podran ser encontrados en este path del proyecto MCSQUAD: 
--> webapp.WEB-INF.views.*;
+- webapp.WEB-INF.views.*;
 
-</p>
 
 <h3> Spring MVC </h3>
 <p style="text-align: justify;"> 
@@ -84,11 +84,11 @@ Se utlizo el modelo MVC para crear el proyecto, por ende dentro de la carpeta Co
 En la carpeta DAO se encuentran las clases de implementacion del DAO y los rowmappers necesarios para su implementacion. 
 En la carpeta Modelo se encuentran las clases padre e hijas. 
 La carpeta View aloja los archivos JSP, estos incluyen el home, navbar, listar Usuario, etc.
-
-En general, todo lo relacionado al proyecto podra ser encontrado en estos directorios del proyecto MCSQUAD: 
--> java.cl.mundenius.mcsquad.controllers.*;
--> java.cl.mundenius.mcsquad.interfaces.*;
--> java.cl.mundenius.mcsquad.dao.*;
--> java.cl.mundenius.mcsquad.modelo.*;
--> webapp.WEB-INF.views.*;
 </p>
+En general, todo lo relacionado al proyecto podra ser encontrado en estos directorios del proyecto MCSQUAD: 
+- java.cl.mundenius.mcsquad.controllers.*;
+- java.cl.mundenius.mcsquad.interfaces.*;
+- java.cl.mundenius.mcsquad.dao.*;
+- java.cl.mundenius.mcsquad.modelo.*;
+- webapp.WEB-INF.views.*;
+
