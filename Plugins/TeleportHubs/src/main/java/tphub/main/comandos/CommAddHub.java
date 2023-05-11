@@ -20,7 +20,10 @@ public class CommAddHub implements CommandExecutor {
 	public CommAddHub(Main plugin) {
 		this.plugin = plugin;
 	}
-
+	/**@category Comandos
+	 * @param AddHub
+	 * Comando que sirve para agregar Hubs al archivo config
+	 *  */
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
 		if (!(sender instanceof Player)) {

@@ -23,6 +23,10 @@ public class CommTpHub implements CommandExecutor {
 		this.plugin = plugin;
 	}
 
+	/**@category Comandos
+	 * @param TpHub
+	 * Comando que sirve para teletransportarse a la Hub llamada
+	 *  */
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if (!(sender instanceof Player)) {
 			Bukkit.getConsoleSender().sendMessage("No puedes ejecutar este comando desde la consola");
