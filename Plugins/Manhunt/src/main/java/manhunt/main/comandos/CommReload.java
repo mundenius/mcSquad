@@ -17,6 +17,10 @@ public class CommReload implements CommandExecutor{
 		this.plugin = plugin; 
 	}
 
+	/**@category Comando
+	 * @param Reload
+	 * Este comando recarga el plugin, sin necesidad de reiniciar el servidor. 
+	 * */
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		// TODO Auto-generated method stub

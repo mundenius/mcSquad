@@ -20,6 +20,11 @@ public class CommRemoveHub implements CommandExecutor{
 		this.plugin = plugin;
 	}
 	
+	
+	/**@category Comandos
+	 * @param RemoveHub
+	 * Comando que sirve para eliminar Hubs del archivo config
+	 *  */
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if (!(sender instanceof Player)) {
 			Bukkit.getConsoleSender().sendMessage("No puedes ejecutar este comando desde la consola");

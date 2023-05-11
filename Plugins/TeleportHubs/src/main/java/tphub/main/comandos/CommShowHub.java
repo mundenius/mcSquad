@@ -23,6 +23,10 @@ public class CommShowHub implements CommandExecutor{
 		this.plugin = plugin;
 	}
 
+	/**@category Comandos
+	 * @param ShowHub
+	 * Comando que sirve para mostrar las Hubs del jugador que ejecuta el comando
+	 *  */
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		if(!(sender instanceof Player)) {
 			Bukkit.getConsoleSender().sendMessage("No puedes ejecutar este comando desde la consola");
