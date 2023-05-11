@@ -42,19 +42,21 @@ Minecraft es un juego que esta codificado en Java, por ende conocer el lenguaje 
 <p style="text-align: justify;"> 
 Se utilizo el patron de de conexion DAO. Por ende en las clases respectivas a ImplXxxxDao, se podran encontrar las sentencias de mySQL. 
 Existen distintos tipos de sentencias las cuales se usan para que el CRUD sea existoso. Estas sentencias son de INSERT, UPDATE, SELECT y DELETE. Tambien se utilizaron otras sentencias como WHERE y ORDER BY para filtar y ordenar los datos.
-Se podran encontrar en este path: 
+Se podran encontrar en este path: </p>
+
 - java.cl.mundenius.mcsquad.dao.*;
 Clases:
-	- ImplAdminDao: lineas 34-48
-	- ImplClienteDao: lineas 32 -46
-	- ImplUsuarioDao: lineas 30-41
-</p>
+- ImplAdminDao: lineas 34-48
+- ImplClienteDao: lineas 32 -46
+- ImplUsuarioDao: lineas 30-41
+
 
 <h3> Algoritmos y Unidades de Prueba </h3>
 <p style="text-align: justify;"> 
 El grueso de los algoritmos de mis codigos, se encuentra en los plugins. Los plugins fueron codificados en su totalidad en lenguaje Java, y al tener funcionalidades tan especiales, era necesario hacer uso de sentencias repetitivas como for loops, y crear formulas de calculos especificos para determinar ciertos comportamientos de los objetos dentro del juego.
 Al utilizar el software Spigot para alojar y crear el servidor en donde corren los plugins, es necesario utilizar herencia, polimorfismo e interfaces, además de entender como funcionan las relaciones entre los objetos para de esta forma crear nuevas funcionalidades con las ya existentes. </p>
 Se podran encontrar estas en estos directorios de los proyectos ManHunt, TeleportHubs y AssaultSquad: 
+
 - Manhunt.src.main.java.main.comandos.*;
 - TeleportHubs.src.main.java.main.comandos.*;
 - AssaultSquad.src.main.java.main.comandos.*;
@@ -86,6 +88,7 @@ En la carpeta Modelo se encuentran las clases padre e hijas.
 La carpeta View aloja los archivos JSP, estos incluyen el home, navbar, listar Usuario, etc.
 </p>
 En general, todo lo relacionado al proyecto podra ser encontrado en estos directorios del proyecto MCSQUAD: 
+
 - java.cl.mundenius.mcsquad.controllers.*;
 - java.cl.mundenius.mcsquad.interfaces.*;
 - java.cl.mundenius.mcsquad.dao.*;
